@@ -1,0 +1,21 @@
+.button {
+  display: inline-block;
+  padding: 22px 51px;
+  font: inherit;
+  text-transform: uppercase;
+  background-color: $color-accent;
+  border: none;
+  border-radius: 65px;
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: #f39425;
+  }
+}

@@ -1,3 +1,11 @@
+.popup {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
 .popup__overlay {
   position: fixed;
   top: 0;
@@ -55,6 +63,10 @@
   line-height: 38px;
   color: #ffffff;
   margin-bottom: 28px;
+
+  &--question {
+    margin-bottom: 39px;
+  }
 }
 
 .popup__location {

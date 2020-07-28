@@ -41,23 +41,3 @@
   line-height: 25px;
   margin-bottom: 69px;
 }
-
-.promo__button {
-  display: inline-block;
-  padding: 22px 51px;
-  font: inherit;
-  text-transform: uppercase;
-  background-color: $color-accent;
-  border-radius: 65px;
-  font-weight: 800;
-  font-size: 17px;
-  line-height: 20px;
-  letter-spacing: 0.03em;
-  color: #ffffff;
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    background-color: #f39425;
-  }
-}
