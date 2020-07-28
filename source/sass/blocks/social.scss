@@ -5,15 +5,44 @@
 
 .social__item {
   margin-right: 7px;
+  height: 28px;
 }
 
 .social__link {
+  position: relative;
+  display: block;
   text-decoration: none;
-}
-
-.social__link-icon {
   width: 28px;
   height: 28px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    top: 0;
+    left: 0;
+
+    background-repeat: no-repeat;
+  }
+
+  &--instagram::before {
+    background-image: url("../../img/instagram.svg");
+  }
+
+  &--vkontakte::before {
+    background-image: url("../../img/vk.svg");
+  }
+
+  &--instagram:hover::before,
+  &--instagram:focus::before {
+    background-image: url("../../img/instagram-hover.svg");
+  }
+
+  &--vkontakte:hover::before,
+  &--vkontakte:focus::before {
+    background-image: url("../../img/vk-hover.svg");
+  }
 }
 
 .page-footer__question {
@@ -27,6 +56,11 @@
   padding-top: 6px;
   padding-bottom: 2px;
 
+  &:hover ,
+  &:focus {
+    color: $color-accent;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -36,6 +70,11 @@
     background-repeat: repeat-x;
     bottom: 0;
     left: 0;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    background-image: url("../../img/line-dashed-orange.svg");
   }
 }
 

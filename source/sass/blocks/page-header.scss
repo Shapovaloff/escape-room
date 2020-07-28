@@ -41,6 +41,7 @@
   border: none;
   background: none;
   text-transform: uppercase;
+  outline: none;
   cursor: pointer;
 
   &::before {
@@ -66,7 +67,8 @@
     background-size: cover;
   }
 
-  &:hover::after {
+  &:hover::after,
+  &:focus::after {
     content: "";
   }
 }

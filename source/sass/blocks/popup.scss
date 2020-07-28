@@ -1,0 +1,117 @@
+.popup__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(#3D3333, 0.97);
+}
+
+.popup__wrapper {
+  position: fixed;
+  width: 480px;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 32px;
+  background-image: linear-gradient(0deg, #141414 0%, #1F1D1D 100%);
+  border-radius: 3px;
+  min-height: 485px;
+}
+
+.popup__close {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  right: 32px;
+  top: 40px;
+  border: none;
+  background: none;
+  opacity: 0.5;
+  cursor: pointer;
+
+  &::after,
+  &:before {
+    left: -2px;
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: #ffffff;
+    transform: rotate(45deg);
+
+  }
+
+  &:before {
+    transform: rotate(-45deg);
+  }
+}
+
+.popup__title {
+  margin: 0;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 38px;
+  color: #ffffff;
+  margin-bottom: 28px;
+}
+
+.popup__location {
+  font: inherit;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 25px;
+  margin-left: 32px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 25px;
+  color: #e6e6e6;
+  border-bottom: 1px solid #ffffff;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/gprs-location.svg");
+  }
+}
+
+.popup__text {
+  font-size: 17px;
+  line-height: 27px;
+}
+
+.popup__item {
+  margin-bottom: 20px;
+}
+
+.popup__list {
+  @include reset-list;
+}
+
+.popup__link {
+  font: inherit;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+  opacity: 0.32;
+  text-decoration: none;
+  padding-bottom: 2px;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+.popup__item--active .popup__link {
+  opacity: 1;
+  border-bottom: 2px solid $color-accent;
+}
