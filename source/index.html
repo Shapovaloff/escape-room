@@ -8,6 +8,40 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <p>Старт проекта</p>
+  <div style="display: none">
+    <include src="build/img/sprite_auto.svg"><include>
+  </div>
+
+
+  <header class="page-header">
+    <div class="page-header__wrapper">
+      <a class="page-header__logo" aria-label="Ссылка на главную страницу">
+        <svg class="page-header__logo-icon" width="136" height="52">
+          <use xlink:href="#icon-logo"></use>
+        </svg>
+      </a>
+      <nav class="page-header__nav">
+        <ul class="page-header__site-list site-list">
+          <li class="site-list__item">
+            <a href="#" class="site-list__link" aria-label="Ссылка на страницу с квестами">квесты</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#" class="site-list__link" aria-label="Ссылка на страницу с квестами для новичков">новичкам</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#" class="site-list__link" aria-label="Ссылка на страницу с отзывами">отзывы</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#" class="site-list__link" aria-label="Ссылка на страницу с акциями">акции</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#" class="site-list__link" aria-label="Ссылка на страницу с контактами">контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <button type="button" class="page-header__town">новосибирск</button>
+      <a class="page-header__phone" href="tel:83832840160" aria-label="Позвонить">8 (383) 284 01 60</a>
+    </div>
+  </header>
 </body>
 </html>

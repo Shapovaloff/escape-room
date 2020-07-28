@@ -1,0 +1,26 @@
+.site-list {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.site-list__item {
+  margin-right: 48px;
+}
+
+.site-list__link {
+  font: inherit;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  color: $color-text-white;
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+}
+

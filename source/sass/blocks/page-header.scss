@@ -1,0 +1,91 @@
+.page-header {
+  background-color: #000;
+}
+
+.page-header__wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 1366px;
+  margin: 0 auto;
+  padding-top: 23px;
+  padding-bottom: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.page-header__logo {
+  margin-right: auto;
+}
+
+.page-header__nav {
+  margin-bottom: 9px;
+  margin-right: 91px;
+}
+
+.page-header__town {
+  position: relative;
+  margin-right: 25px;
+  margin-bottom: 7px;
+  padding: 0;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font: inherit;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: $color-accent;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -24px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 21px;
+    background-image: url("../img/marker.svg");
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-image: url("../img/line-dashed.svg");
+    background-repeat: repeat-x;
+    background-size: cover;
+  }
+
+  &:hover::after {
+    content: "";
+  }
+}
+
+.page-header__phone {
+  margin-right: 7px;
+  margin-bottom: 7px;
+
+  font: inherit;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  font-variant-numeric: lining-nums;
+  font-feature-settings: 'lnum' 1;
+  color: $color-text-white;
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+}
