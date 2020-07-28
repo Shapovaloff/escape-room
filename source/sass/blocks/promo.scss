@@ -1,0 +1,63 @@
+.promo {
+  position: static;
+  width: 1366px;
+  margin: 0 auto;
+  margin-top: 74px;
+  margin-bottom: 125px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1366px;
+    height: 768px;
+    background-color: #000000;
+    background-image: linear-gradient(274.19deg, transparent 35.91%, rgba(#24150E, 0.53) 65.15%, rgba(#1A140D, 0.53) 98.48%), url("../../img/bg-index-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    z-index: -1;
+    background-position: top center;
+    background-size: 1366px 768px;
+  }
+}
+
+.promo__wrapper {
+  padding-left: 136px;
+  padding-right: 136px;
+}
+
+
+.promo__title {
+  width: 530px;
+  margin-bottom: 32px;
+}
+
+.promo__text {
+  margin: 0;
+  width: 470px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+  margin-bottom: 69px;
+}
+
+.promo__button {
+  display: inline-block;
+  padding: 22px 51px;
+  font: inherit;
+  text-transform: uppercase;
+  background-color: $color-accent;
+  border-radius: 65px;
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: #f39425;
+  }
+}

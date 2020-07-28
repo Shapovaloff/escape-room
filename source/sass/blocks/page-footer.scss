@@ -1,0 +1,15 @@
+.page-footer {
+  position: sticky;
+  bottom: 0;
+  width: 1366px;
+  padding-left: 32px;
+  padding-right: 32px;
+  margin: 0 auto;
+  padding-bottom: 17px;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+}

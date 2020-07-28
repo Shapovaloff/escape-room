@@ -1,0 +1,41 @@
+.social {
+  @include reset-list;
+  display: flex;
+}
+
+.social__item {
+  margin-right: 7px;
+}
+
+.social__link {
+  text-decoration: none;
+}
+
+.social__link-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.page-footer__question {
+  position: relative;
+  font: inherit;
+  font-size: 12px;
+  line-height: 17px;
+  color: $color-text;
+  text-decoration: none;
+  margin-bottom: 7px;
+  padding-top: 6px;
+  padding-bottom: 2px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-image: url("../../img/line-dashed-white.svg");
+    background-repeat: repeat-x;
+    bottom: 0;
+    left: 0;
+  }
+}
+
