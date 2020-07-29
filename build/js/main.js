@@ -12,19 +12,17 @@
   var questionClose = questionPopup.querySelector('.popup__close--question');
   var questionOverlay = questionPopup.querySelector('.popup__overlay');
 
-  console.log(questionClose)
-
   var openTownPopup = function (popup, evt) {
     evt.preventDefault();
     bodyElement.classList.add('no-scroll');
     popup.classList.add('popup--active');
-  }
+  };
 
   var closeTownPopup = function (popup, evt) {
     evt.preventDefault();
     bodyElement.classList.remove('no-scroll');
     popup.classList.remove('popup--active');
-  }
+  };
 
   window.addEventListener('keydown', function (evt) {
     if (evt.keyCode === ESCAPE) {
@@ -46,13 +44,13 @@
     popupButton.addEventListener('click', function (evt) {
       openTownPopup(popup, evt);
     });
-  }
+  };
 
   var listenerPopupClose = function (popupButton, popup) {
     popupButton.addEventListener('click', function (evt) {
       closeTownPopup(popup, evt);
     });
-  }
+  };
 
   listenerPopupOpen(townButton, townPopup);
   listenerPopupOpen(questionButton, questionPopup);
@@ -63,9 +61,10 @@
 
   townOverlay.addEventListener('click', function (evt) {
     closeTownPopup(townPopup, evt);
-  })
+  });
 
   questionOverlay.addEventListener('click', function (evt) {
     closeTownPopup(questionPopup, evt);
-  })
+  });
+
 })();

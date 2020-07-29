@@ -1,6 +1,12 @@
 .page-header {
-  position: relative;
-  // background-color: #000;
+  position: sticky;
+  top: 0;
+  flex: 1 0 auto;
+  z-index: 1;
+
+  &--quests {
+    background-color: #1f1d1d;
+  }
 }
 
 .page-header__wrapper {
@@ -11,7 +17,6 @@
   width: 1366px;
   margin: 0 auto;
   padding-top: 23px;
-  padding-bottom: 32px;
   padding-left: 32px;
   padding-right: 32px;
 }
@@ -84,7 +89,7 @@
   letter-spacing: 0.03em;
   text-decoration: none;
   font-variant-numeric: lining-nums;
-  font-feature-settings: 'lnum' 1;
+  font-feature-settings: "lnum" 1;
   color: $color-text-white;
 
   &:hover,

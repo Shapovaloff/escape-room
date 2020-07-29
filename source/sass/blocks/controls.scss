@@ -1,0 +1,50 @@
+.controls {
+  @include reset-list;
+  margin-bottom: 34px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.controls__item {
+  border-right: 1px solid rgba(#ffffff, 0.32);
+
+  &:last-child {
+    border: none;
+  }
+}
+
+.controls__btn {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 39px;
+
+  border: none;
+  background: none;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: $color-text;
+  outline: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+}
+
+.controls__item:first-child .controls__btn {
+  padding-left: 1px;
+}
+
+.controls__btn-icon {
+  margin-right: 12px;
+}
+
+.controls__item--active .controls__btn-text {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-bottom: 2px solid $color-accent;
+}

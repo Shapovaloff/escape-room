@@ -51,7 +51,6 @@
 .form__item input:hover,
 .form__item textarea:hover {
   border-color: #ffffff;
-
 }
 
 .form__btn {
@@ -64,7 +63,7 @@
   margin-bottom: 24px;
 
   &:disabled {
-    background-color: #B8B8B8;
+    background-color: #b8b8b8;
     cursor: default;
   }
 }

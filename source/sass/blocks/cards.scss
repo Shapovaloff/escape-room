@@ -1,0 +1,155 @@
+.cards {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cards__item {
+  position: relative;
+  margin-right: 24px;
+  margin-bottom: 32px;
+  background-color: #000000;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 160px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(0.17deg, rgba(28, 27, 27, 0.9) 5.23%, rgba(46, 46, 46, 0) 98.38%);
+  }
+}
+
+.cards__link {
+  text-decoration: none;
+}
+
+.cards__img {
+  display: block;
+  border-radius: 4px;
+  width: 344px;
+  height: 232px;
+}
+
+.cards__hit {
+  position: absolute;
+  right: 17px;
+  top: 15px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 17px;
+  color: $color-text;
+  padding-left: 29px;
+  padding-right: 13px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border: 2px solid rgba($color-accent, 0.74);
+  border-radius: 25px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 13px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    background-image: url("../../img/star-icon.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.cards__wrap {
+  position: absolute;
+  bottom: 19px;
+  left: 19px;
+  width: 235px;
+}
+
+.cards__item:hover .cards__title,
+.cards__item:focus .cards__title {
+  color: $color-accent;
+}
+
+.cards__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+  margin-bottom: 11px;
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum" 1;
+}
+
+.cards__address,
+.cards__persons,
+.cards__complexity {
+  position: relative;
+  font: inherit;
+  font-size: 13px;
+  line-height: 19px;
+  color: rgba($color-text, 0.8);
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum" 1;
+}
+
+.cards__address {
+  margin: 0;
+  padding-left: 21px;
+  margin-bottom: 1px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 1px;
+    width: 11px;
+    height: 14px;
+    background-image: url("../img/marker.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.cards__persons,
+.cards__complexity {
+  position: relative;
+  display: inline-block;
+  padding-left: 30px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.cards__persons {
+  padding-right: 11px;
+  padding-left: 22px;
+  border-right: 2px solid rgba(255, 255, 255, 0.5);
+
+  &::after {
+    width: 13px;
+    height: 15px;
+    left: 1px;
+    background-image: url("../../img/person-icon.svg");
+  }
+}
+
+.cards__complexity {
+  &::after {
+    width: 15px;
+    height: 15px;
+    left: 7px;
+    background-image: url("../../img/puzzle-icon.svg");
+  }
+}
