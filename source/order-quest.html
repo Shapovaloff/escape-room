@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,11 @@
   <meta name="description" content="Лучшие квесты в Новосибирске">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
   <div style="display: none">
-    <include src="build/img/sprite_auto.svg"><include>
+    <include src="build/img/sprite_auto.svg">
+      <include>
   </div>
 
   <header class="page-header">
@@ -23,7 +26,8 @@
       <nav class="page-header__nav">
         <ul class="page-header__site-list site-list">
           <li class="site-list__item">
-            <a href="quests.html" class="site-list__link site-list__link--active" aria-label="Ссылка на страницу с квестами">квесты</a>
+            <a href="quests.html" class="site-list__link site-list__link--active"
+              aria-label="Ссылка на страницу с квестами">квесты</a>
           </li>
           <li class="site-list__item">
             <a href="#" class="site-list__link" aria-label="Ссылка на страницу с квестами для новичков">новичкам</a>
@@ -46,32 +50,95 @@
 
   <main class="page-main">
     <h1 class="visually-hidden">Тематика квеста "Маньяк"</h1>
-    <section class="quest quest--maniac">
-      <div class="quest__wrapper">
-        <p class="quest__subtitle quest__subtitle--maniac">хоррор, триллер</p>
-        <h2 class="title quest__title quest__title--maniac">маньяк</h2>
-        <ul class="quest__list">
-          <li class="quest__item">
-            <svg class="quest__icon" width="24" height="24">
-              <use xlink:href="#icon-clock">
-            </svg>
-            <span class="quest__text">60 мин</span>
-          </li>
-          <li class="quest__item">
-            <svg class="quest__icon" width="19" height="24">
-              <use xlink:href="#icon-person">
-            </svg>
-            <span class="quest__text">3–4 чел</span>
-          </li>
-          <li class="quest__item">
-            <svg class="quest__icon" width="24" height="24">
-              <use xlink:href="#icon-puzzle">
-            </svg>
-            <span class="quest__text">средняя сложность</span>
-          </li>
-        </ul>
-        <p class="quest__description">В комнате с приглушённым светом несколько человек, незнакомых друг с другом, приходят в себя. Никто не помнит, что произошло прошлым вечером. Руки и ноги связаным, но одному из вас получилось освободиться. На стене висит пугающий таймер и запущен отстёт 60 минут. Сможете ли вы разобраться в стрессовой ситуации, помочь другим, разобраться что произошло и выбраться из комнаты?</p>
-        <a href="order-quest.html" class="button quest__button">забронировать</a>
+    <section class="order">
+      <div class="order__wrapper">
+        <form class="order__form" action="https://echo.htmlacademy.ru" method="POST">
+          <div class="order__title-block">
+            <p class="order__subtitle">выбранный квест</p>
+            <h2 class="title order__title">Маньяк</h2>
+          </div>
+
+          <div class="order__block-sessions">
+            <div class="order__date-block">
+              <button type="button" class="order__button order__data-btn">Выберите дату</button>
+              <span class="order__data">22 марта</span>
+            </div>
+
+            <ul class="order__info">
+              <li class="order__info-item order__info-item--free">— сводобно</li>
+              <li class="order__info-item order__info-item--busy">— занято</li>
+              <li class="order__info-item order__info-item--selected">— выбрано вами</li>
+            </ul>
+
+            <ul class="order__form-list">
+              <li class="order__form-item">
+                <input class="visually-hidden" type="radio" id="order__time-9" name="time" value="9:45">
+                <label for="order__time-9">9:45</label>
+                <span>1400 ₽</span>
+              </li>
+              <li class="order__form-item">
+                <input class="visually-hidden" type="radio" id="order__time-11" name="time" value="11:00">
+                <label for="order__time-11">11:00</label>
+                <span>1400 ₽</span>
+              </li>
+              <li class="order__form-item">
+                <input class="visually-hidden" type="radio" id="order__time-12" name="time" value="12:15" disabled>
+                <label for="order__time-12">12:15</label>
+                <span>1400 ₽</span>
+              </li>
+              <li class="order__form-item">
+                <input class="visually-hidden" type="radio" id="order__time-13" name="time" value="13:30" disabled>
+                <label for="order__time-13">13:30</label>
+                <span>1400 ₽</span>
+              </li>
+              <li class="order__form-item">
+                <input class="visually-hidden" type="radio" id="order__time-14" name="time" value="14:45">
+                <label for="order__time-14">14:45</label>
+                <span>1400 ₽</span>
+              </li>
+              <li class="order__form-item">
+                <input class="visually-hidden" type="radio" id="order__time-16" name="time" value="16:00">
+                <label for="order__time-16">16:00</label>
+                <span>1500 ₽</span>
+              </li>
+              <li class="order__form-item">
+                <input class="visually-hidden" type="radio" id="order__time-17" name="time" value="17:15" disabled>
+                <label for="order__time-17">17:15</label>
+                <span>1500 ₽</span>
+              </li>
+              <li class="order__form-item">
+                <input class="visually-hidden" type="radio" id="order__time-18" name="time" value="18:30">
+                <label for="order__time-18">18:30</label>
+                <span>1500 ₽</span>
+              </li>
+              <li class="order__form-item">
+                <input class="visually-hidden" type="radio" id="order__time-19" name="time" value="19:45">
+                <label for="order__time-19">19:45</label>
+                <span>1500 ₽</span>
+              </li>
+              <li class="order__form-item">
+                <input class="visually-hidden" type="radio" id="order__time-21" name="time" value="21:00">
+                <label for="order__time-21">21:00</label>
+                <span>1800 ₽</span>
+              </li>
+              <li class="order__form-item">
+                <input class="visually-hidden" type="radio" id="order__time-22" name="time" value="22:15" disabled>
+                <label for="order__time-22">22:15</label>
+                <span>1800 ₽</span>
+              </li>
+              <li class="order__form-item">
+                <input class="visually-hidden" type="radio" id="order__time-23" name="time" value="23:30" disabled>
+                <label for="order__time-23">23:30</label>
+                <span>2000 ₽</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="order__block-pay">
+            <p class="order__data-time">Вы выбрали игру &nbsp; 22 марта в 16:00. К оплате 1500 рублей.</p>
+            <button class="order__button order__form-btn" type="submit">Перейти к оплате</button>
+          </div>
+        </form>
       </div>
     </section>
   </main>
@@ -143,7 +210,8 @@
         <button type="submit" class="button form__btn" disabled>отправить вопрос</button>
         <p class="form__checkbox">
           <input type="checkbox" class="visually-hidden" id="form__checkbox" required>
-          <label for="form__checkbox">Я согласен с <a href="#">правилами обработки персональных данных</a> и пользовательским соглашением</label>
+          <label for="form__checkbox">Я согласен с <a href="#">правилами обработки персональных данных</a> и
+            пользовательским соглашением</label>
         </p>
       </form>
     </div>
@@ -151,4 +219,5 @@
 
   <script src="js/main.js"></script>
 </body>
+
 </html>
