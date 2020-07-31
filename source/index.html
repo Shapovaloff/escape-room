@@ -13,14 +13,18 @@
     <include src="build/img/sprite_auto.svg"><include>
   </div>
 
-  <header class="page-header">
+  <header class="page-header page-header--opened">
     <div class="page-header__wrapper">
-      <a class="page-header__logo" aria-label="Ссылка на главную страницу">
-        <svg class="page-header__logo-icon" width="136" height="52">
-          <use xlink:href="#icon-logo"></use>
-        </svg>
-      </a>
+      <div class="page-header__logo-block">
+        <a class="page-header__logo" aria-label="Ссылка на главную страницу">
+          <svg class="page-header__logo-icon" width="136" height="52">
+            <use xlink:href="#icon-logo"></use>
+          </svg>
+        </a>
+        <button class="page-header__toggle">Меню</button>
+      </div>
       <nav class="page-header__nav">
+
         <ul class="page-header__site-list site-list">
           <li class="site-list__item">
             <a href="quests.html" class="site-list__link" aria-label="Ссылка на страницу с квестами">квесты</a>
@@ -38,9 +42,16 @@
             <a href="#" class="site-list__link" aria-label="Ссылка на страницу с контактами">контакты</a>
           </li>
         </ul>
+        <div class="page-header__contacts">
+          <button type="button" class="page-header__town">
+            <svg class="page-header__town-icon" width="16" height="21">
+              <use xlink:href="#icon-marker">
+            </svg>
+            <span class="page-header__town-text">новосибирск</span>
+          </button>
+          <a class="page-header__phone" href="tel:83832840160" aria-label="Позвонить">8 (383) 284 01 60</a>
+        </div>
       </nav>
-      <button type="button" class="page-header__town">новосибирск</button>
-      <a class="page-header__phone" href="tel:83832840160" aria-label="Позвонить">8 (383) 284 01 60</a>
     </div>
   </header>
 
@@ -54,7 +65,7 @@
     </section>
   </main>
 
-  <footer class="page-footer">
+  <footer class="page-footer page-footer--opened">
     <div class="page-footer__wrapper">
       <ul class="page-footer__social social">
         <li class="social__item">

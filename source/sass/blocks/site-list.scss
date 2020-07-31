@@ -2,10 +2,27 @@
   @include reset-list;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  width: calc(51% + 63px);
+
+  @media (max-width: $tablet-width) {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+
+  @media (max-width: $mobile-width) {
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    order: 1;
+    margin-top: 37px;
+  }
 }
 
 .site-list__item {
-  margin-right: 48px;
+  @media (max-width: $mobile-width) {
+    margin-bottom: 34px;
+  }
 }
 
 .site-list__link {
@@ -26,5 +43,11 @@
   &--active {
     color: $color-accent;
     cursor: default;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
   }
 }

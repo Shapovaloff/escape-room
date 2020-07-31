@@ -18,4 +18,12 @@
   &:focus {
     background-color: #f39425;
   }
+
+  @media (max-width: $mobile-width) {
+    padding: 15px 32px;
+    font-size: 14px;
+    line-height: 16px;
+    min-width: 185px;
+    min-height: 47px;
+  }
 }

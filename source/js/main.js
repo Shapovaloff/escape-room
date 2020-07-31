@@ -68,3 +68,21 @@
   });
 
 })();
+
+// Функция открытия и закрытия меню в мобильной версии
+
+(function () {
+  var menuButton = document.querySelector('.page-header__toggle');
+  var menuHeader = document.querySelector('.page-header');
+  var menuFooter = document.querySelector('.page-footer');
+
+  menuButton.addEventListener('click', function () {
+    if (menuHeader.classList.contains('page-header--opened')) {
+      menuHeader.classList.remove('page-header--opened');
+      menuFooter.classList.remove('page-footer--opened');
+    } else {
+      menuHeader.classList.add('page-header--opened');
+      menuFooter.classList.add('page-footer--opened');
+    }
+  });
+})();
