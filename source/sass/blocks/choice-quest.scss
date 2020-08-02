@@ -1,12 +1,27 @@
 .choice-quest {
   position: static;
+  max-width: 1366px;
+  margin: 0 auto;
+  margin-top: 39px;
+
+  @media (max-width: $mobile-width) {
+    margin-top: 24px;
+  }
 }
 
 .choice-quest__wrapper {
-  width: 1366px;
-  padding-left: 136px;
-  padding-right: 136px;
-  margin: 0 auto;
+  padding-left: 10%;
+  padding-right: 10%;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .choice-quest__subtitle {
@@ -17,8 +32,37 @@
   font-size: 14px;
   line-height: 20px;
   color: $color-accent;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 11px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 .choice-quest__title {
   margin-bottom: 44px;
+
+  @media (max-width: $mobile-width) {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 40px;
+  }
+}
+
+.choice-quest__block-contols {
+  @media (max-width: $mobile-width) {
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 13%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background-image: linear-gradient(270deg, #1C1B1B 0%, rgba(28, 27, 27, 0) 100%);
+    }
+  }
 }

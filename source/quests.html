@@ -12,457 +12,577 @@
 
 <body>
   <div style="display: none">
-    <include src="build/img/sprite_auto.svg">
-      <include>
+    <include src="build/img/sprite_auto.svg"><include>
   </div>
 
-  <header class="page-header page-header--quests">
-    <div class="page-header__wrapper">
-      <a href="index.html" class="page-header__logo" aria-label="Ссылка на главную страницу">
-        <svg class="page-header__logo-icon" width="136" height="52">
-          <use xlink:href="#icon-logo"></use>
-        </svg>
-      </a>
-      <nav class="page-header__nav">
-        <ul class="page-header__site-list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link site-list__link--active" aria-label="Ссылка на страницу с квестами">квесты</a>
+  <div class="page-container page-container--quests">
+    <header class="page-header page-header--closed page-header--nojs page-header--quests">
+      <div class="page-header__wrapper">
+        <div class="page-header__logo-block">
+          <a href="index.html" class="page-header__logo" aria-label="Ссылка на главную страницу">
+            <svg class="page-header__logo-icon" width="136" height="52">
+              <use xlink:href="#icon-logo"></use>
+            </svg>
+          </a>
+          <button class="page-header__toggle">Меню</button>
+        </div>
+        <nav class="page-header__nav">
+          <ul class="page-header__site-list site-list">
+            <li class="site-list__item site-list__item--active">
+              <a class="site-list__link" aria-label="Ссылка на страницу с квестами">квесты</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#" class="site-list__link" aria-label="Ссылка на страницу с квестами для новичков">новичкам</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#" class="site-list__link" aria-label="Ссылка на страницу с отзывами">отзывы</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#" class="site-list__link" aria-label="Ссылка на страницу с акциями">акции</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#" class="site-list__link" aria-label="Ссылка на страницу с контактами">контакты</a>
+            </li>
+          </ul>
+          <div class="page-header__contacts">
+            <button type="button" class="page-header__town">
+              <svg class="page-header__town-icon" width="16" height="21">
+                <use xlink:href="#icon-marker">
+              </svg>
+              <span class="page-header__town-text">новосибирск</span>
+            </button>
+            <a class="page-header__phone" href="tel:83832840160" aria-label="Позвонить">8 (383) 284 01 60</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <h1 class="visually-hidden">Лучшие квесты в Новосибирске</h1>
+      <section class="choice-quest">
+        <div class="choice-quest__wrapper">
+          <p class="choice-quest__subtitle">квесты в Новосибирске</p>
+          <h2 class="title choice-quest__title">Выберите тематику</h2>
+          <div class="choice-quest__block-contols">
+            <ul class="choice-quest__controls controls swiper-wrapper">
+              <li class="controls__item swiper-slide controls__item--active">
+                <button type="button" class="controls__btn controls__btn--all-quests">
+                  <svg class="controls__btn-icon controls__btn-icon--all-quests" width="26" height="30">
+                    <use xlink:href="#icon-all-quests">
+                  </svg>
+                  <span class="controls__btn-text">Все квесты</span>
+                </button>
+              </li>
+              <li class="controls__item swiper-slide">
+                <button type="button" class="controls__btn controls__btn--adventures">
+                  <svg class="controls__btn-icon controls__btn-icon--adventures" width="36" height="30">
+                    <use xlink:href="#icon-adventures">
+                  </svg>
+                  <span class="controls__btn-text">Приключения</span>
+                </button>
+              </li>
+              <li class="controls__item swiper-slide">
+                <button type="button" class="controls__btn controls__btn--horror">
+                  <svg class="controls__btn-icon controls__btn-icon--horror" width="30" height="30">
+                    <use xlink:href="#icon-horrors">
+                  </svg>
+                  <span class="controls__btn-text">Ужасы</span>
+                </button>
+              </li>
+              <li class="controls__item swiper-slide">
+                <button type="button" class="controls__btn controls__btn--mystic">
+                  <svg class="controls__btn-icon controls__btn-icon--mystic" width="30" height="30">
+                    <use xlink:href="#icon-mystic">
+                  </svg>
+                  <span class="controls__btn-text">Мистика</span>
+                </button>
+              </li>
+              <li class="controls__item swiper-slide">
+                <button type="button" class="controls__btn controls__btn--detective">
+                  <svg class="controls__btn-icon controls__btn-icon--detective" width="40" height="30">
+                    <use xlink:href="#icon-detective">
+                  </svg>
+                  <span class="controls__btn-text">Детектив</span>
+                </button>
+              </li>
+              <li class="controls__item swiper-slide">
+                <button type="button" class="controls__btn controls__btn--scifi">
+                  <svg class="controls__btn-icon controls__btn-icon--scifi" width="28" height="30">
+                    <use xlink:href="#icon-scifi">
+                  </svg>
+                  <span class="controls__btn-text">Sci-fi</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <ul class="choice-quest__cards cards">
+            <li class="cards__item">
+              <a href="#" class="cards__link">
+                <picture>
+                  <source type="image/webp" srcset="img/quests-img/crypt-desktop@1x.webp 1x, img/quests-img/crypt-desktop@2x.webp 2x">
+                  <!-- 1х: 344px; 2x: 688px -->
+                  <img class="cards__img" src="img/quests-img/crypt-desktop@1x.jpg" srcset="img/quests-img/crypt-desktop@2x.jpg 2x" width="344" height="232" alt="Квест Склеп">
+                </picture>
+                <span class="cards__hit">Хит</span>
+                <div class="cards__wrap">
+                  <h3 class="cards__title">Склеп</h3>
+                  <p class="cards__address">
+                    <svg width="12" height="14">
+                      <use xlink:href="#icon-marker">
+                    </svg>
+                    <span>пр. Ленина, 37</span>
+                  </p>
+
+                  <div class="cards__block">
+                    <p class="cards__persons">
+                      <svg width="13" height="16">
+                        <use xlink:href="#icon-person">
+                      </svg>
+                      <span>2–5 чел</span>
+                    </p>
+                    <p class="cards__complexity">
+                      <svg width="16" height="16">
+                        <use xlink:href="#icon-puzzle">
+                      </svg>
+                      <span>сложный</span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <li class="cards__item">
+              <a href="maniac-quest.html" class="cards__link">
+                <picture>
+                 <source type="image/webp" srcset="img/quests-img/maniac-desktop@1x.webp 1x, img/quests-img/maniac-desktop@2x.webp 2x">
+                  <!-- 1х: 344px; 2x: 688px -->
+                  <img class="cards__img" src="img/quests-img/maniac-desktop@1x.jpg" srcset="img/quests-img/maniac-desktop@2x.jpg 2x" width="344" height="232" alt="Квест Маньяк">
+                </picture>
+                <span class="cards__hit">Хит</span>
+                <div class="cards__wrap">
+                  <h3 class="cards__title">Маньяк</h3>
+                  <p class="cards__address">
+                    <svg width="12" height="14">
+                      <use xlink:href="#icon-marker">
+                    </svg>
+                    <span>Верхнетецкая, 32</span>
+                  </p>
+
+                  <div class="cards__block">
+                    <p class="cards__persons">
+                      <svg width="13" height="16">
+                        <use xlink:href="#icon-person">
+                      </svg>
+                      <span>3–6 чел</span>
+                    </p>
+                    <p class="cards__complexity">
+                      <svg width="16" height="16">
+                        <use xlink:href="#icon-puzzle">
+                      </svg>
+                      <span>средний</span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <li class="cards__item">
+              <a href="ritual-quest.html" class="cards__link">
+                <picture>
+                  <source type="image/webp" srcset="img/quests-img/ritual-desktop@1x.webp 1x, img/quests-img/ritual-desktop@2x.webp 2x">
+                  <!-- 1х: 344px; 2x: 688px -->
+                  <img class="cards__img" src="img/quests-img/ritual-desktop@1x.jpg" srcset="img/quests-img/ritual-desktop@2x.jpg 2x" width="344" height="232" alt="Квест Ритуал">
+                </picture>
+                <div class="cards__wrap">
+                  <h3 class="cards__title">Ритуал</h3>
+                  <p class="cards__address">
+                    <svg width="12" height="14">
+                      <use xlink:href="#icon-marker">
+                    </svg>
+                    <span>пр. Ленина, 37</span>
+                  </p>
+                  <div class="cards__block">
+                    <p class="cards__persons">
+                      <svg width="13" height="16">
+                        <use xlink:href="#icon-person">
+                      </svg>
+                      <span>3–5 чел</span>
+                    </p>
+                    <p class="cards__complexity">
+                      <svg width="16" height="16">
+                        <use xlink:href="#icon-puzzle">
+                      </svg>
+                      <span>легкий</span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <li class="cards__item">
+              <a href="#" class="cards__link">
+                <picture>
+                  <source type="image/webp" srcset="img/quests-img/history-desktop@1x.webp 1x, img/quests-img/history-desktop@2x.webp 2x">
+                  <!-- 1х: 344px; 2x: 688px -->
+                  <img class="cards__img" src="img/quests-img/history-desktop@1x.jpg" srcset="img/quests-img/history-desktop@2x.jpg 2x" width="344" height="232" alt="Квест История призраков">
+                </picture>
+                <div class="cards__wrap">
+                  <h3 class="cards__title">История призраков</h3>
+                  <p class="cards__address">
+                    <svg width="12" height="14">
+                      <use xlink:href="#icon-marker">
+                    </svg>
+                    <span>Новослободская, 2а</span>
+                  </p>
+                  <div class="cards__block">
+                    <p class="cards__persons">
+                      <svg width="13" height="16">
+                        <use xlink:href="#icon-person">
+                      </svg>
+                      <span>5–6 чел</span>
+                    </p>
+                    <p class="cards__complexity">
+                      <svg width="16" height="16">
+                        <use xlink:href="#icon-puzzle">
+                      </svg>
+                      <span>легкий</span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <li class="cards__item">
+              <a href="secrets-quest.html" class="cards__link">
+                <picture>
+                  <source type="image/webp"
+                    srcset="img/quests-img/secrets-desktop@1x.webp 1x, img/quests-img/secrets-desktop@2x.webp 2x">
+                  <!-- 1х: 344px; 2x: 688px -->
+                  <img class="cards__img" src="img/quests-img/secrets-desktop@1x.jpg" srcset="img/quests-img/secrets-desktop@2x.jpg 2x"
+                    width="344" height="232" alt="Квест Тайны старого особняка">
+                </picture>
+                <div class="cards__wrap">
+                  <h3 class="cards__title">Тайны старого особняка</h3>
+                  <p class="cards__address">
+                    <svg width="12" height="14">
+                      <use xlink:href="#icon-marker">
+                    </svg>
+                    <span>пр. Ленина, 37</span>
+                  </p>
+                  <div class="cards__block">
+                    <p class="cards__persons">
+                      <svg width="13" height="16">
+                        <use xlink:href="#icon-person">
+                      </svg>
+                      <span>2–5 чел</span>
+                    </p>
+                    <p class="cards__complexity">
+                      <svg width="16" height="16">
+                        <use xlink:href="#icon-puzzle">
+                      </svg>
+                      <span>легкий</span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <li class="cards__item">
+              <a href="#" class="cards__link">
+                <picture>
+                  <source type="image/webp"
+                    srcset="img/quests-img/hut-desktop@1x.webp 1x, img/quests-img/hut-desktop@2x.webp 2x">
+                  <!-- 1х: 344px; 2x: 688px -->
+                  <img class="cards__img" src="img/quests-img//hut-desktop@1x.jpg" srcset="img/quests-img/hut-desktop@2x.jpg 2x" width="344"
+                    height="232" alt="Квест Хижина в лесу">
+                </picture>
+                <span class="cards__hit">Хит</span>
+                <div class="cards__wrap">
+                  <h3 class="cards__title">Хижина в лесу</h3>
+                  <p class="cards__address">
+                    <svg width="12" height="14">
+                      <use xlink:href="#icon-marker">
+                    </svg>
+                    <span>Верхнетецкая, 32</span>
+                  </p>
+                  <div class="cards__block">
+                    <p class="cards__persons">
+                      <svg width="13" height="16">
+                        <use xlink:href="#icon-person">
+                      </svg>
+                      <span>4–7 чел</span>
+                    </p>
+                    <p class="cards__complexity">
+                      <svg width="16" height="16">
+                        <use xlink:href="#icon-puzzle">
+                      </svg>
+                      <span>средний</span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <li class="cards__item">
+              <a href="experiment-quest.html" class="cards__link">
+                <picture>
+                  <source type="image/webp"
+                    srcset="img/quests-img/experiment-desktop@1x.webp 1x, img/quests-img/experiment-desktop@2x.webp 2x">
+                  <!-- 1х: 344px; 2x: 688px -->
+                  <img class="cards__img" src="img/quests-img/experiment-desktop@1x.jpg" srcset="img/quests-img/experiment-desktop@2x.jpg 2x"
+                    width="344" height="232" alt="Квест Фатальный эксперимент">
+                </picture>
+                <span class="cards__hit">Хит</span>
+                <div class="cards__wrap">
+                  <h3 class="cards__title">Фатальный эксперимент</h3>
+                  <p class="cards__address">
+                    <svg width="12" height="14">
+                      <use xlink:href="#icon-marker">
+                    </svg>
+                    <span>Верхнетецкая, 32</span>
+                  </p>
+                  <div class="cards__block">
+                    <p class="cards__persons">
+                      <svg width="13" height="16">
+                        <use xlink:href="#icon-person">
+                      </svg>
+                      <span>5–8 чел</span>
+                    </p>
+                    <p class="cards__complexity">
+                      <svg width="16" height="16">
+                        <use xlink:href="#icon-puzzle">
+                      </svg>
+                      <span>сложный</span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <li class="cards__item">
+              <a href="#" class="cards__link">
+                <picture>
+                  <source type="image/webp"
+                    srcset="img/quests-img/metro-desktop@1x.webp 1x, img/quests-img/metro-desktop@2x.webp 2x">
+                  <!-- 1х: 344px; 2x: 688px -->
+                  <img class="cards__img" src="img/quests-img/metro-desktop@1x.jpg" srcset="img/quests-img/metro-desktop@2x.jpg 2x"
+                    width="344" height="232" alt="Квест Метро 2033">
+                </picture>
+
+                <div class="cards__wrap">
+                  <h3 class="cards__title">Метро 2033</h3>
+                  <p class="cards__address">
+                    <svg width="12" height="14">
+                      <use xlink:href="#icon-marker">
+                    </svg>
+                    <span>Новослободская, 2а</span>
+                  </p>
+                  <div class="cards__block">
+                    <p class="cards__persons">
+                      <svg width="13" height="16">
+                        <use xlink:href="#icon-person">
+                      </svg>
+                      <span>6–8 чел</span>
+                    </p>
+                    <p class="cards__complexity">
+                      <svg width="16" height="16">
+                        <use xlink:href="#icon-puzzle">
+                      </svg>
+                      <span>средний</span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <li class="cards__item">
+              <a href="#" class="cards__link">
+                <picture>
+                  <source type="image/webp"
+                    srcset="img/quests-img/attic-desktop@1x.webp 1x, img/quests-img/attic-desktop@2x.webp 2x">
+                  <!-- 1х: 344px; 2x: 688px -->
+                  <img class="cards__img" src="img/quests-img/attic-desktop@1x.jpg" srcset="img/quests-img/attic-desktop@2x.jpg 2x"
+                    width="344" height="232" alt="Квест Старый чердак">
+                </picture>
+                <div class="cards__wrap">
+                  <h3 class="cards__title">Старый чердак</h3>
+                  <p class="cards__address">
+                    <svg width="12" height="14">
+                      <use xlink:href="#icon-marker">
+                    </svg>
+                    <span>Новослободская, 2а</span>
+                  </p>
+                  <div class="cards__block">
+                    <p class="cards__persons">
+                      <svg width="13" height="16">
+                        <use xlink:href="#icon-person">
+                      </svg>
+                      <span>2–3 чел</span>
+                    </p>
+                    <p class="cards__complexity">
+                      <svg width="16" height="16">
+                        <use xlink:href="#icon-puzzle">
+                      </svg>
+                      <span>легкий</span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <li class="cards__item">
+              <a href="#" class="cards__link">
+                <picture>
+                  <source type="image/webp"
+                    srcset="img/quests-img/frontier-desktop@1x.webp 1x, img/quests-img/frontier-desktop@2x.webp 2x">
+                  <!-- 1х: 344px; 2x: 688px -->
+                  <img class="cards__img" src="img/quests-img/frontier-desktop@1x.jpg" srcset="img/quests-img/frontier-desktop@2x.jpg 2x"
+                    width="344" height="232" alt="Квест Последний рубеж">
+                </picture>
+                <div class="cards__wrap">
+                  <h3 class="cards__title">Последний рубеж</h3>
+                  <p class="cards__address">
+                    <svg width="12" height="14">
+                      <use xlink:href="#icon-marker">
+                    </svg>
+                    <span>Верхнетецкая, 32</span>
+                  </p>
+                  <div class="cards__block">
+                    <p class="cards__persons">
+                      <svg width="13" height="16">
+                        <use xlink:href="#icon-person">
+                      </svg>
+                      <span>4–7 чел</span>
+                    </p>
+                    <p class="cards__complexity">
+                      <svg width="16" height="16">
+                        <use xlink:href="#icon-puzzle">
+                      </svg>
+                      <span>средний</span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <li class="cards__item">
+              <a href="#" class="cards__link">
+                <picture>
+                  <source type="image/webp"
+                    srcset="img/quests-img/mars-desktop@1x.webp 1x, img/quests-img/mars-desktop@2x.webp 2x">
+                  <!-- 1х: 344px; 2x: 688px -->
+                  <img class="cards__img" src="img/quests-img/mars-desktop@1x.jpg" srcset="img/quests-img/mars-desktop@2x.jpg 2x" width="344"
+                    height="232" alt="Квест Ритуал">
+                </picture>
+                <div class="cards__wrap">
+                  <h3 class="cards__title">Марс-2056</h3>
+                  <p class="cards__address">
+                    <svg width="12" height="14">
+                      <use xlink:href="#icon-marker">
+                    </svg>
+                    <span>пр. Ленина, 37</span>
+                  </p>
+                  <div class="cards__block">
+                    <p class="cards__persons">
+                      <svg width="13" height="16">
+                        <use xlink:href="#icon-person">
+                      </svg>
+                      <span>2–4 чел</span>
+                    </p>
+                    <p class="cards__complexity">
+                      <svg width="16" height="16">
+                        <use xlink:href="#icon-puzzle">
+                      </svg>
+                      <span>легкий</span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer page-footer--quests page-footer--closed page-footer--nojs">
+      <div class="page-footer__wrapper">
+        <ul class="page-footer__social social">
+          <li class="social__item">
+            <a href="#" class="social__link social__link--instagram">
+              <span class="visually-hidden">Инстаграм</span>
+            </a>
           </li>
-          <li class="site-list__item">
-            <a href="#" class="site-list__link" aria-label="Ссылка на страницу с квестами для новичков">новичкам</a>
-          </li>
-          <li class="site-list__item">
-            <a href="#" class="site-list__link" aria-label="Ссылка на страницу с отзывами">отзывы</a>
-          </li>
-          <li class="site-list__item">
-            <a href="#" class="site-list__link" aria-label="Ссылка на страницу с акциями">акции</a>
-          </li>
-          <li class="site-list__item">
-            <a href="#" class="site-list__link" aria-label="Ссылка на страницу с контактами">контакты</a>
+          <li class="social__item">
+            <a href="#" class="social__link social__link--vkontakte">
+              <span class="visually-hidden">Вконтакте</span>
+            </a>
           </li>
         </ul>
-      </nav>
-      <button type="button" class="page-header__town">новосибирск</button>
-      <a class="page-header__phone" href="tel:83832840160" aria-label="Позвонить">8 (383) 284 01 60</a>
-    </div>
-  </header>
+        <a href="#" class="page-footer__question">Задать вопрос</a>
+      </div>
+    </footer>
 
-  <main class="page-main">
-    <h1 class="visually-hidden">Лучшие квесты в Новосибирске</h1>
-    <section class="choice-quest">
-      <div class="choice-quest__wrapper">
-        <p class="choice-quest__subtitle">квесты в Новосибирске</p>
-        <h2 class="title choice-quest__title">Выберите тематику</h2>
-        <ul class="choice-quest__controls controls">
-          <li class="controls__item controls__item--active">
-            <button type="button" class="controls__btn controls__btn--all-quests">
-              <svg class="controls__btn-icon" width="26" height="30">
-                <use xlink:href="#icon-all-quests">
-              </svg>
-              <span class="controls__btn-text">Все квесты</span>
-            </button>
-          </li>
-          <li class="controls__item">
-            <button type="button" class="controls__btn controls__btn--adventures">
-              <svg class="controls__btn-icon" width="36" height="30">
-                <use xlink:href="#icon-adventures">
-              </svg>
-              <span class="controls__btn-text">Приключения</span>
-            </button>
-          </li>
-          <li class="controls__item">
-            <button type="button" class="controls__btn controls__btn--horror">
-              <svg class="controls__btn-icon" width="30" height="30">
-                <use xlink:href="#icon-horrors">
-              </svg>
-              <span class="controls__btn-text">Ужасы</span>
-            </button>
-          </li>
-          <li class="controls__item">
-            <button type="button" class="controls__btn controls__btn--mystic">
-              <svg class="controls__btn-icon" width="30" height="30">
-                <use xlink:href="#icon-mystic">
-              </svg>
-              <span class="controls__btn-text">Мистика</span>
-            </button>
-          </li>
-          <li class="controls__item">
-            <button type="button" class="controls__btn controls__btn--detective">
-              <svg class="controls__btn-icon" width="40" height="30">
-                <use xlink:href="#icon-detective">
-              </svg>
-              <span class="controls__btn-text">Детектив</span>
-            </button>
-          </li>
-          <li class="controls__item">
-            <button type="button" class="controls__btn controls__btn--scifi">
-              <svg class="controls__btn-icon" width="28" height="30">
-                <use xlink:href="#icon-scifi">
-              </svg>
-              <span class="controls__btn-text">Sci-fi</span>
-            </button>
-          </li>
-        </ul>
+    <section class="popup popup--town">
+      <div class="popup__overlay popup__overlay--town"></div>
+      <div class="popup__wrapper">
+        <button class="popup__close popup__close--town" aria-label="Закрывает модальное окно"></button>
+        <h2 class="popup__title">Ваш город:</h2>
+        <a class="popup__location">Определить местоположение</a>
+        <p class="popup__text">... или выберите вручную</p>
 
-        <ul class="choice-quest__cards cards">
-          <li class="cards__item">
-            <a href="#" class="cards__link">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="img/quests-img/crypt-mobile@1x.webp 1x, img/quests-img/crypt-mobile@2x.webp 2x">
-                <source type="image/webp"
-                  srcset="img/quests-img/crypt-desktop@1x.webp 1x, img/quests-img/crypt-desktop@2x.webp 2x">
-                <!-- 1х: 328x; 2x: 656px -->
-                <source media="(max-width: 767px)"
-                  srcset="img/quests-img/crypt-mobile@1x.jpg 1x, img/quests-img/crypt-mobile@2x.jpg 2x">
-                <!-- 1х: 344px; 2x: 688px -->
-                <img class="cards__img" src="img/quests-img/crypt-desktop@1x.jpg" srcset="img/quests-img/crypt-desktop@2x.jpg 2x"
-                  width="344" height="232" alt="Квест Склеп">
-              </picture>
-              <span class="cards__hit">Хит</span>
-              <div class="cards__wrap">
-                <h3 class="cards__title">Склеп</h3>
-                <p class="cards__address">пр. Ленина, 37</p>
-                <span class="cards__persons">2–5 чел</span>
-                <span class="cards__complexity">сложный</span>
-              </div>
-            </a>
+        <ul class="popup__list">
+          <li class="popup__item popup__item--active">
+            <a href="#" class="popup__link">Новосибирск</a>
           </li>
-
-          <li class="cards__item">
-            <a href="maniac-quest.html" class="cards__link">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="img/quests-img/maniac-mobile@1x.webp 1x, img/quests-img/maniac-mobile@2x.webp 2x">
-                <source type="image/webp"
-                  srcset="img/quests-img/maniac-desktop@1x.webp 1x, img/quests-img/crypt-desktop@2x.webp 2x">
-                <!-- 1х: 328x; 2x: 656px -->
-                <source media="(max-width: 767px)"
-                  srcset="img/quests-img/maniac-mobile@1x.jpg 1x, img/quests-img/maniac-mobile@2x.jpg 2x">
-                <!-- 1х: 344px; 2x: 688px -->
-                <img class="cards__img" src="img/quests-img/maniac-desktop@1x.jpg" srcset="img/quests-img/maniac-desktop@2x.jpg 2x"
-                  width="344" height="232" alt="Квест Маньяк">
-              </picture>
-              <span class="cards__hit">Хит</span>
-              <div class="cards__wrap">
-                <h3 class="cards__title">Маньяк</h3>
-                <p class="cards__address">Верхнетецкая, 32</p>
-                <div class="cards__block">
-                  <span class="cards__persons">3–6 чел</span>
-                  <span class="cards__complexity">средний</span>
-                </div>
-              </div>
-            </a>
+          <li class="popup__item">
+            <a href="#" class="popup__link">Иркутск</a>
           </li>
-
-          <li class="cards__item">
-            <a href="ritual-quest.html" class="cards__link">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="img/quests-img/ritual-mobile@1x.webp 1x, img/quests-img/ritual-mobile@2x.webp 2x">
-                <source type="image/webp"
-                  srcset="img/quests-img/ritual-desktop@1x.webp 1x, img/quests-img/ritual-desktop@2x.webp 2x">
-                <!-- 1х: 328x; 2x: 656px -->
-                <source media="(max-width: 767px)"
-                  srcset="img/quests-img/ritual-mobile@1x.jpg 1x, img/quests-img/ritual-mobile@2x.jpg 2x">
-                <!-- 1х: 344px; 2x: 688px -->
-                <img class="cards__img" src="img/quests-img/ritual-desktop@1x.jpg" srcset="img/quests-img/ritual-desktop@2x.jpg 2x"
-                  width="344" height="232" alt="Квест Ритуал">
-              </picture>
-              <div class="cards__wrap">
-                <h3 class="cards__title">Ритуал</h3>
-                <p class="cards__address">пр. Ленина, 37</p>
-                <div class="cards__block">
-                  <span class="cards__persons">3–5 чел</span>
-                  <span class="cards__complexity">легкий</span>
-                </div>
-              </div>
-            </a>
+          <li class="popup__item">
+            <a href="#" class="popup__link">Смоленск</a>
           </li>
-
-          <li class="cards__item">
-            <a href="#" class="cards__link">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="img/quests-img/history-mobile@1x.webp 1x, img/quests-img/history-mobile@2x.webp 2x">
-                <source type="image/webp"
-                  srcset="img/quests-img/history-desktop@1x.webp 1x, img/quests-img/history-desktop@2x.webp 2x">
-                <!-- 1х: 328x; 2x: 656px -->
-                <source media="(max-width: 767px)"
-                  srcset="img/quests-img/history-mobile@1x.jpg 1x, img/quests-img/history-mobile@2x.jpg 2x">
-                <!-- 1х: 344px; 2x: 688px -->
-                <img class="cards__img" src="img/quests-img/history-desktop@1x.jpg" srcset="img/quests-img/history-desktop@2x.jpg 2x"
-                  width="344" height="232" alt="Квест История призраков">
-              </picture>
-              <div class="cards__wrap">
-                <h3 class="cards__title">История призраков</h3>
-                <p class="cards__address">Новослободская, 2а</p>
-                <div class="cards__block">
-                  <span class="cards__persons">5–6 чел</span>
-                  <span class="cards__complexity">легкий</span>
-                </div>
-              </div>
-            </a>
+          <li class="popup__item">
+            <a href="#" class="popup__link">Волгоград</a>
           </li>
-
-          <li class="cards__item">
-            <a href="secrets-quest.html" class="cards__link">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="img/quests-img/secrets-mobile@1x.webp 1x, img/quests-img/secrets-mobile@2x.webp 2x">
-                <source type="image/webp"
-                  srcset="img/quests-img/secrets-desktop@1x.webp 1x, img/quests-img/secrets-desktop@2x.webp 2x">
-                <!-- 1х: 328x; 2x: 656px -->
-                <source media="(max-width: 767px)"
-                  srcset="img/quests-img/secrets-mobile@1x.jpg 1x, img/quests-img/secrets-mobile@2x.jpg 2x">
-                <!-- 1х: 344px; 2x: 688px -->
-                <img class="cards__img" src="img/quests-img/secrets-desktop@1x.jpg" srcset="img/quests-img/secrets-desktop@2x.jpg 2x"
-                  width="344" height="232" alt="Квест Тайны старого особняка">
-              </picture>
-              <div class="cards__wrap">
-                <h3 class="cards__title">Тайны старого особняка</h3>
-                <p class="cards__address">пр. Ленина, 37</p>
-                <div class="cards__block">
-                  <span class="cards__persons">2–5 чел</span>
-                  <span class="cards__complexity">легкий</span>
-                </div>
-              </div>
-            </a>
+          <li class="popup__item">
+            <a href="#" class="popup__link">Комсомольск-на-Амуре</a>
           </li>
-
-          <li class="cards__item">
-            <a href="#" class="cards__link">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="img/quests-img/hut-mobile@1x.webp 1x, img/quests-img/hut-mobile@2x.webp 2x">
-                <source type="image/webp"
-                  srcset="img/quests-img/hut-desktop@1x.webp 1x, img/quests-img/hut-desktop@2x.webp 2x">
-                <!-- 1х: 328x; 2x: 656px -->
-                <source media="(max-width: 767px)"
-                  srcset="img/quests-img/hut-mobile@1x.jpg 1x, img/quests-img/hut-mobile@2x.jpg 2x">
-                <!-- 1х: 344px; 2x: 688px -->
-                <img class="cards__img" src="img/quests-img//hut-desktop@1x.jpg" srcset="img/quests-img/hut-desktop@2x.jpg 2x" width="344"
-                  height="232" alt="Квест Хижина в лесу">
-              </picture>
-              <span class="cards__hit">Хит</span>
-              <div class="cards__wrap">
-                <h3 class="cards__title">Хижина в лесу</h3>
-                <p class="cards__address">Верхнетецкая, 32</p>
-                <div class="cards__block">
-                  <span class="cards__persons">4–7 чел</span>
-                  <span class="cards__complexity">средний</span>
-                </div>
-              </div>
-            </a>
-          </li>
-
-          <li class="cards__item">
-            <a href="experiment-quest.html" class="cards__link">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="img/quests-img/experiment-mobile@1x.webp 1x, img/quests-img/experiment-mobile@2x.webp 2x">
-                <source type="image/webp"
-                  srcset="img/quests-img/experiment-desktop@1x.webp 1x, img/quests-img/experiment-desktop@2x.webp 2x">
-                <!-- 1х: 328x; 2x: 656px -->
-                <source media="(max-width: 767px)"
-                  srcset="img/quests-img/experiment-mobile@1x.jpg 1x, img/quests-img/experiment-mobile@2x.jpg 2x">
-                <!-- 1х: 344px; 2x: 688px -->
-                <img class="cards__img" src="img/quests-img/experiment-desktop@1x.jpg" srcset="img/quests-img/experiment-desktop@2x.jpg 2x"
-                  width="344" height="232" alt="Квест Фатальный эксперимент">
-              </picture>
-              <span class="cards__hit">Хит</span>
-              <div class="cards__wrap">
-                <h3 class="cards__title">Фатальный эксперимент</h3>
-                <p class="cards__address">Верхнетецкая, 32</p>
-                <div class="cards__block">
-                  <span class="cards__persons">5–8 чел</span>
-                  <span class="cards__complexity">сложный</span>
-                </div>
-              </div>
-            </a>
-          </li>
-
-          <li class="cards__item">
-            <a href="#" class="cards__link">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="img/quests-img/metro-mobile@1x.webp 1x, img/quests-img/metro-mobile@2x.webp 2x">
-                <source type="image/webp"
-                  srcset="img/quests-img/metro-desktop@1x.webp 1x, img/quests-img/metro-desktop@2x.webp 2x">
-                <!-- 1х: 328x; 2x: 656px -->
-                <source media="(max-width: 767px)"
-                  srcset="img/quests-img/metro-mobile@1x.jpg 1x, img/quests-img/metro-mobile@2x.jpg 2x">
-                <!-- 1х: 344px; 2x: 688px -->
-                <img class="cards__img" src="img/quests-img/metro-desktop@1x.jpg" srcset="img/quests-img/metro-desktop@2x.jpg 2x"
-                  width="344" height="232" alt="Квест Метро 2033">
-              </picture>
-              <div class="cards__wrap">
-                <h3 class="cards__title">Метро 2033</h3>
-                <p class="cards__address">Новослободская, 2а</p>
-                <div class="cards__block">
-                  <span class="cards__persons">6–8 чел</span>
-                  <span class="cards__complexity">средний</span>
-                </div>
-              </div>
-            </a>
-          </li>
-
-          <li class="cards__item">
-            <a href="#" class="cards__link">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="img/quests-img/attic-mobile@1x.webp 1x, img/quests-img/attic-mobile@2x.webp 2x">
-                <source type="image/webp"
-                  srcset="img/quests-img/attic-desktop@1x.webp 1x, img/quests-img/attic-desktop@2x.webp 2x">
-                <!-- 1х: 328x; 2x: 656px -->
-                <source media="(max-width: 767px)"
-                  srcset="img/quests-img/attic-mobile@1x.jpg 1x, img/quests-img/attic-mobile@2x.jpg 2x">
-                <!-- 1х: 344px; 2x: 688px -->
-                <img class="cards__img" src="img/quests-img/attic-desktop@1x.jpg" srcset="img/quests-img/attic-desktop@2x.jpg 2x"
-                  width="344" height="232" alt="Квест Старый чердак">
-              </picture>
-              <div class="cards__wrap">
-                <h3 class="cards__title">Старый чердак</h3>
-                <p class="cards__address">Новослободская, 2а</p>
-                <div class="cards__block">
-                  <span class="cards__persons">2–3 чел</span>
-                  <span class="cards__complexity">легкий</span>
-                </div>
-              </div>
-            </a>
-          </li>
-
-          <li class="cards__item">
-            <a href="#" class="cards__link">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="img/quests-img/frontier-mobile@1x.webp 1x, img/quests-img/frontier-mobile@2x.webp 2x">
-                <source type="image/webp"
-                  srcset="img/quests-img/frontier-desktop@1x.webp 1x, img/quests-img/frontier-desktop@2x.webp 2x">
-                <!-- 1х: 328x; 2x: 656px -->
-                <source media="(max-width: 767px)"
-                  srcset="img/quests-img/frontier-mobile@1x.jpg 1x, img/quests-img/frontier-mobile@2x.jpg 2x">
-                <!-- 1х: 344px; 2x: 688px -->
-                <img class="cards__img" src="img/quests-img/frontier-desktop@1x.jpg" srcset="img/quests-img/frontier-desktop@2x.jpg 2x"
-                  width="344" height="232" alt="Квест Последний рубеж">
-              </picture>
-              <div class="cards__wrap">
-                <h3 class="cards__title">Последний рубеж</h3>
-                <p class="cards__address">Верхнетецкая, 32</p>
-                <div class="cards__block">
-                  <span class="cards__persons">4–7 чел</span>
-                  <span class="cards__complexity">средний</span>
-                </div>
-              </div>
-            </a>
-          </li>
-
-          <li class="cards__item">
-            <a href="#" class="cards__link">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="img/quests-img/mars-mobile@1x.webp 1x, img/quests-img/mars-mobile@2x.webp 2x">
-                <source type="image/webp"
-                  srcset="img/quests-img/mars-desktop@1x.webp 1x, img/quests-img/mars-desktop@2x.webp 2x">
-                <!-- 1х: 328x; 2x: 656px -->
-                <source media="(max-width: 767px)"
-                  srcset="img/quests-img/mars-mobile@1x.jpg 1x, img/quests-img/mars-mobile@2x.jpg 2x">
-                <!-- 1х: 344px; 2x: 688px -->
-                <img class="cards__img" src="img/quests-img/mars-desktop@1x.jpg" srcset="img/quests-img/mars-desktop@2x.jpg 2x" width="344"
-                  height="232" alt="Квест Ритуал">
-              </picture>
-              <div class="cards__wrap">
-                <h3 class="cards__title">Марс-2056</h3>
-                <p class="cards__address">пр. Ленина, 37</p>
-                <div class="cards__block">
-                  <span class="cards__persons">2–4 чел</span>
-                  <span class="cards__complexity">легкий</span>
-                </div>
-              </div>
-            </a>
-          </li>
-
         </ul>
       </div>
     </section>
-  </main>
 
-  <footer class="page-footer page-footer--quests">
-    <div class="page-footer__wrapper">
-      <ul class="page-footer__social social">
-        <li class="social__item">
-          <a href="#" class="social__link social__link--instagram">
-            <span class="visually-hidden">Инстаграм</span>
-          </a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__link social__link--vkontakte">
-            <span class="visually-hidden">Вконтакте</span>
-          </a>
-        </li>
-      </ul>
-      <a href="#" class="page-footer__question">Задать вопрос</a>
-    </div>
-  </footer>
+    <section class="popup popup--question">
+      <div class="popup__overlay popup__overlay--question"></div>
+      <div class="popup__wrapper">
+        <button class="popup__close popup__close--question" aria-label="Закрывает модальное окно"></button>
+        <h2 class="popup__title popup__title--question">Задайте вопрос</h2>
+        <form class="popup__form form" action="https://echo.htmlacademy.ru" method="POST">
+          <p class="form__item">
+            <label for="form__name">Чтобы мы смогли обращаться к вам, оставьте ваше имя</label>
+            <input id="form__name" name="name" type="text" placeholder="Имя" required>
+          </p>
+          <p class="form__item">
+            <label for="form__email">Чтобы вы получили ответ, оставьте ваш e-mail</label>
+            <input id="form__email" name="email" type="email" placeholder="E-mail" required>
+          </p>
+          <p class="form__item">
+            <label for="form__question">Ваш вопрос:</label>
+            <textarea name="question" id="form__question" placeholder="Начните вводить ..." required></textarea>
+          </p>
+          <button type="submit" class="button form__btn" disabled>отправить вопрос</button>
+          <p class="form__checkbox">
+            <input type="checkbox" class="visually-hidden" id="form__checkbox" required>
+            <label for="form__checkbox">Я согласен с <a href="#">правилами обработки персональных данных</a> и
+              пользовательским соглашением</label>
+          </p>
+        </form>
+      </div>
+    </section>
+  </div>
 
-  <section class="popup popup--town">
-    <div class="popup__overlay popup__overlay--town"></div>
-    <div class="popup__wrapper">
-      <button class="popup__close popup__close--town" aria-label="Закрывает модальное окно"></button>
-      <h2 class="popup__title">Ваш город:</h2>
-      <a class="popup__location">Определить местоположение</a>
-      <p class="popup__text">... или выберите вручную</p>
-
-      <ul class="popup__list">
-        <li class="popup__item popup__item--active">
-          <a href="#" class="popup__link">Новосибирск</a>
-        </li>
-        <li class="popup__item">
-          <a href="#" class="popup__link">Иркутск</a>
-        </li>
-        <li class="popup__item">
-          <a href="#" class="popup__link">Смоленск</a>
-        </li>
-        <li class="popup__item">
-          <a href="#" class="popup__link">Волгоград</a>
-        </li>
-        <li class="popup__item">
-          <a href="#" class="popup__link">Комсомольск-на-Амуре</a>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="popup popup--question">
-    <div class="popup__overlay popup__overlay--question"></div>
-    <div class="popup__wrapper">
-      <button class="popup__close popup__close--question" aria-label="Закрывает модальное окно"></button>
-      <h2 class="popup__title popup__title--question">Задайте вопрос</h2>
-      <form class="popup__form form" action="https://echo.htmlacademy.ru" method="POST">
-        <p class="form__item">
-          <label for="form__name">Чтобы мы смогли обращаться к вам, оставьте ваше имя</label>
-          <input id="form__name" name="name" type="text" placeholder="Имя" required>
-        </p>
-        <p class="form__item">
-          <label for="form__email">Чтобы вы получили ответ, оставьте ваш e-mail</label>
-          <input id="form__email" name="email" type="email" placeholder="E-mail" required>
-        </p>
-        <p class="form__item">
-          <label for="form__question">Ваш вопрос:</label>
-          <textarea name="question" id="form__question" placeholder="Начните вводить ..." required></textarea>
-        </p>
-        <button type="submit" class="button form__btn" disabled>отправить вопрос</button>
-        <p class="form__checkbox">
-          <input type="checkbox" class="visually-hidden" id="form__checkbox" required>
-          <label for="form__checkbox">Я согласен с <a href="#">правилами обработки персональных данных</a> и
-            пользовательским соглашением</label>
-        </p>
-      </form>
-    </div>
-  </section>
-
+  <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
-
 </body>
 
 </html>

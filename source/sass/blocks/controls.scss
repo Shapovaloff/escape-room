@@ -3,9 +3,26 @@
   margin-bottom: 34px;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0 23px 34px -34px;
+
+  @media (max-width: $tablet-width) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-wrap: nowrap;
+    margin-bottom: 39px;
+  }
 }
 
 .controls__item {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  flex-shrink: 0;
   border-right: 1px solid rgba(#ffffff, 0.32);
 
   &:last-child {
@@ -16,12 +33,13 @@
 .controls__btn {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  padding: 10px 39px;
-
+  justify-content: center;
+  width: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border: none;
   background: none;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: -0.02em;
@@ -33,18 +51,60 @@
   &:focus {
     color: $color-accent;
   }
+
+  @media (max-width: $tablet-width) {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 .controls__item:first-child .controls__btn {
   padding-left: 1px;
+
+  @media (max-width: $mobile-width) {
+    padding-left: 17px;
+  }
 }
 
 .controls__btn-icon {
   margin-right: 12px;
+
+  @media (max-width: $tablet-width) {
+    height: 24px;
+
+    &--all-quests {
+      width: 20px;
+    }
+
+    &--adventures {
+      width: 29px;
+    }
+
+    &--horror {
+      width: 24px;
+    }
+
+    &--mystic {
+      width: 24px;
+    }
+
+    &--detective {
+      width: 32px;
+    }
+
+    &--scifi {
+      width: 23px;
+    }
+  }
 }
 
 .controls__item--active .controls__btn-text {
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding-top: 4px;
+  padding-bottom: 2px;
   border-bottom: 2px solid $color-accent;
 }

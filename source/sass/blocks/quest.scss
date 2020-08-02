@@ -1,50 +1,6 @@
-.quest {
-  position: static;
-
-  &::after,
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    background-repeat: no-repeat;
-    z-index: -2;
-    background-size: cover;
-  }
-
-  &--maniac::after {
-    background-image: url("../img/bg-maniac-desktop@1x.jpg");
-  }
-
-  &--secrets::after {
-    background-image: url("../img/bg-secrets-desktop@1x.jpg");
-  }
-
-  &--secrets::before {
-    z-index: -1;
-    background: linear-gradient(107.85deg, rgba(107, 75, 75, 0.05) 30.73%, rgba(36, 21, 21, 0.52) 70.25%), radial-gradient(44.53% 44.53% at 28.7% 44.66%, rgba(0, 0, 0, 0.04) 47.51%, rgba(0, 0, 0, 0.76) 91.16%);
-    opacity: 0.6;
-  }
-
-  &--ritual::after {
-    background-image: url("../img/bg-ritual-desktop@1x.jpg");
-  }
-
-  &--experiment::after {
-    background-image: url("../img/bg-experiment-desktop@1x.jpg");
-  }
-
-  &--experiment::before {
-    z-index: -1;
-    background-image: linear-gradient(107.85deg, rgba(107, 75, 75, 0.05) 30.73%, rgba(36, 21, 21, 0.52) 70.25%), radial-gradient(30.73% 64.85% at 27.56% 50%, rgba(0, 0, 0, 0.04) 48.01%, rgba(0, 0, 0, 0.76) 93.83%);
-    opacity: 0.8;
-  }
-}
-
 .quest__wrapper {
-  width: 680px;
-  margin-left: calc(45% - 14px);
+  max-width: 1366px;
+  margin: 0 auto;
   margin-bottom: 55px;
 
   &--secrets {
@@ -59,6 +15,68 @@
   &--experiment {
     margin-bottom: 10px;
   }
+
+  @media (max-width: $tablet-width) {
+    padding-left: 32px;
+    padding-right: 32px;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 58px;
+    margin-top: 26px;
+  }
+}
+
+.quest__container {
+  margin-left: auto;
+  width: 680px;
+  margin-right: 86px;
+
+  @media (max-width: $tablet-width) {
+    width: 67%;
+    padding-right: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+  }
+}
+
+.quest__link {
+  display: none;
+  position: relative;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 17px;
+  letter-spacing: 0.02em;
+  color: $color-text;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-bottom: 289px;
+  margin-left: 16px;
+
+  @media (max-width: $mobile-width) {
+    display: block;
+
+    &--maniac {
+      margin-bottom: 294px;
+    }
+
+    &--secrets {
+      margin-bottom: 183px;
+    }
+
+    &--experiment {
+      margin-bottom: 265px;
+    }
+  }
+}
+
+.quest__link svg {
+  margin-right: 4px;
 }
 
 .quest__subtitle {
@@ -72,7 +90,20 @@
 
   &--maniac {
     margin-bottom: 9px;
-    margin-left: 6px;
+    margin-left: 7px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-left: 16px;
+
+    &--secrets {
+      margin-bottom: 23px;
+    }
+
+    &--ritual,
+    &--experiment {
+      margin-bottom: 9px;
+    }
   }
 }
 
@@ -88,11 +119,26 @@
   &--maniac {
     margin-bottom: 29px;
   }
+
+  @media (max-width: $tablet-width) {
+    font-size:  70px;
+    line-height: 78px;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 42px;
+    line-height: 46px;
+    letter-spacing: normal;
+    margin-left: 16px;
+    margin-bottom: 18px;
+  }
 }
 
 .quest__list {
   @include reset-list;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 18px;
 
@@ -108,11 +154,17 @@
   &--experiment {
     margin-left: 10px;
   }
+
+  @media (max-width: $mobile-width) {
+    align-items: flex-start;
+    margin-bottom: 13px;
+  }
 }
 
 .quest__item {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   padding-top: 6px;
   padding-bottom: 6px;
   padding-left: 24px;
@@ -125,30 +177,77 @@
 
   &:last-child {
     border: none;
+    padding-right: 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    &:first-child {
+      padding-left: 25px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    text-align: center;
+    width: 33.33%;
+    padding: 0 24px;
+
+    &:first-child {
+      padding-left: 25px;
+    }
+
+    &:last-child {
+      padding-right: 24px;
+    }
   }
 }
 
 .quest__icon {
   margin-right: 7px;
+
+  @media (max-width: $mobile-width) {
+    margin-right: 0;
+    margin-bottom: 9px;
+  }
 }
 
 .quest__text {
   font-size: 14px;
   line-height: 20px;
   color: $color-text;
+
+  @media (max-width: $mobile-width) {
+    font-weight: 400;
+    line-height: 17px;
+  }
 }
 
 .quest__description {
-  margin: 0 130px 43px 30px;
+  margin: 0 130px 43px 31px;
   font-size: 15px;
   line-height: 23px;
 
   &--secrets {
-    margin-right: 155px;
+    margin-right: 151px;
+  }
+
+  &--ritual {
+    margin-right: 128px;
   }
 
   &--experiment {
     margin-left: 40px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-right: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-left: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 25px;
   }
 }
 
@@ -158,5 +257,12 @@
 
   &--experiment {
     margin-left: 40px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 17px;
+    line-height: 20px;
+    padding: 22px 47px;
+    margin-left: 16px;
   }
 }

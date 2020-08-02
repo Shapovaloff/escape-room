@@ -74,15 +74,63 @@
 (function () {
   var menuButton = document.querySelector('.page-header__toggle');
   var menuHeader = document.querySelector('.page-header');
+  var menuMain = document.querySelector('.page-main');
   var menuFooter = document.querySelector('.page-footer');
 
+  menuHeader.classList.remove('page-header--nojs');
+  menuFooter.classList.remove('page-footer--nojs');
+
   menuButton.addEventListener('click', function () {
-    if (menuHeader.classList.contains('page-header--opened')) {
-      menuHeader.classList.remove('page-header--opened');
-      menuFooter.classList.remove('page-footer--opened');
-    } else {
+    if (menuHeader.classList.contains('page-header--closed') && menuFooter.classList.contains('page-footer--closed')) {
+      menuHeader.classList.remove('page-header--closed');
+      menuFooter.classList.remove('page-footer--closed');
       menuHeader.classList.add('page-header--opened');
       menuFooter.classList.add('page-footer--opened');
+      menuMain.style.display = 'none';
+    } else {
+      menuHeader.classList.remove('page-header--opened');
+      menuFooter.classList.remove('page-footer--opened');
+      menuHeader.classList.add('page-header--closed');
+      menuFooter.classList.add('page-footer--closed');
+      menuMain.style.display = 'block';
     }
   });
+})();
+
+// Функция реализации прокрутки табов
+
+(function () {
+  var programsTabs = document.querySelector('.choice-quest__block-contols');
+
+  var breakpoint = window.matchMedia('(min-width:768px)');
+  var mySwiper;
+  var breakpointChecker = function () {
+    if (breakpoint.matches === true) {
+      if (mySwiper) {
+        mySwiper.destroy(true, true);
+      }
+      return;
+    } else if (breakpoint.matches === false) {
+      enableSwiper();
+    }
+  };
+
+
+  var enableSwiper = function () {
+    if (programsTabs) {
+      mySwiper = new window.Swiper(programsTabs, {
+        direction: 'horizontal',
+        slidesPerView: 'auto',
+        freeMode: true,
+        spaceBetween: 0,
+        grabCursor: true,
+        pagination: {
+          clickable: true,
+        },
+      });
+    }
+  };
+
+  breakpoint.addListener(breakpointChecker);
+  breakpointChecker();
 })();

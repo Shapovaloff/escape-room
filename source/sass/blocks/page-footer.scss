@@ -5,12 +5,15 @@
   padding-bottom: 21px;
 
   &--quests {
-    background: linear-gradient(180deg, transparent 0%, rgba(#131212, 0.8) 100%);
+    background: linear-gradient(180deg, transparent 0%, rgba(#131212, 1) 100%);
   }
 
   @media (max-width: $mobile-width) {
-    display: none;
     padding-bottom: 35px;
+
+    &--closed {
+      display: none;
+    }
 
     &--opened {
       width: 100%;
@@ -18,6 +21,10 @@
       display: flex;
       z-index: 1;
       bottom: 0;
+    }
+
+    &--quests {
+      background: none;
     }
   }
 }

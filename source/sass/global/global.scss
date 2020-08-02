@@ -9,10 +9,6 @@ html {
 }
 
 body {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   min-width: 360px;
   margin: 0;
   padding: 0;
@@ -24,9 +20,6 @@ body {
   color: $color-text;
   background-color: #141414;
   background-image: linear-gradient(0deg, #141414 0%, #1f1d1d 100%);
-  background-repeat: no-repeat;
-  font-variant-numeric: lining-nums;
-  font-feature-settings: "lnum" 1;
 }
 
 img {
