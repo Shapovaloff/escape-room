@@ -3,10 +3,10 @@
 }
 
 .form__item {
-  padding: 0;
   margin: 0;
   margin-bottom: 27px;
   margin-right: 16px;
+  padding: 0;
 
   &--btn {
     margin-right: 0;
@@ -20,17 +20,17 @@
 
 .form__item label {
   display: inline-block;
+  margin-bottom: 15px;
+  margin-right: 0;
   font: inherit;
   font-size: 15px;
   line-height: 22px;
   cursor: pointer;
-  margin-bottom: 15px;
-  margin-right: 0;
 
   @media (max-width: $mobile-width) {
-    line-height: 23px;
     margin-bottom: 15px;
     margin-right: 25px;
+    line-height: 23px;
   }
 }
 
@@ -55,7 +55,7 @@
   outline: none;
 
   &:valid {
-    border-color: #2CDB52;
+    border-color: #2cdb52;
   }
 
   &--invalid {
@@ -69,15 +69,16 @@
 
 .form__placeholder {
   position: absolute;
-  display: block;
   left: 19px;
   top: 50%;
+  display: block;
+  padding: 5px;
   transform: translateY(-50%);
   font: inherit;
   font-size: 14px;
   line-height: 20px;
-  color: rgba(#E6E6E6, 0.64);
-  padding: 5px;
+  color: rgba($color-text, 0.64);
+
   transition: transform 0.35s, background 0.35s;
 
   &--value {
@@ -99,13 +100,12 @@
   position: absolute;
   left: 24px;
   bottom: -20px;
-  color: #D26F13;
-  font-weight: 400;
+  display: none;
+  color: #d26f13;
   font-weight: 500;
   font-size: 12px;
   line-height: 17px;
   text-align: center;
-  display: none;
 }
 
 .form__item textarea {
@@ -120,7 +120,7 @@
   font: inherit;
   font-size: 14px;
   line-height: 20px;
-  resize: vertical;
+  resize: none;
   color: $color-text;
   cursor: pointer;
   outline: none;
@@ -135,12 +135,12 @@
 
 .form__btn {
   display: block;
-  font-size: 14px;
-  line-height: 16px;
-  padding: 15px 32px;
   margin: 0 auto;
   margin-top: 33px;
   margin-bottom: 24px;
+  padding: 15px 32px;
+  font-size: 14px;
+  line-height: 16px;
 
   &:disabled {
     background-color: #b8b8b8;
@@ -169,10 +169,10 @@
   &::after {
     content: "";
     position: absolute;
-    width: 16px;
-    height: 16px;
     left: 0;
     top: 2px;
+    width: 16px;
+    height: 16px;
     background-color: $color-accent;
     border-radius: 4px;
     opacity: 0.4;

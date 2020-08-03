@@ -17,22 +17,22 @@
   }
 
   @media (max-width: $tablet-width) {
+    margin-bottom: 0;
     padding-left: 32px;
     padding-right: 32px;
-    margin-bottom: 0;
   }
 
   @media (max-width: $mobile-width) {
-    padding-left: 0;
-    padding-right: 0;
     margin-bottom: 58px;
     margin-top: 26px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
 .quest__container {
-  margin-left: auto;
   width: 680px;
+  margin-left: auto;
   margin-right: 86px;
 
   @media (max-width: $tablet-width) {
@@ -46,8 +46,10 @@
 }
 
 .quest__link {
-  display: none;
   position: relative;
+  display: none;
+  margin-bottom: 289px;
+  margin-left: 16px;
   font-weight: 700;
   font-size: 12px;
   line-height: 17px;
@@ -55,8 +57,6 @@
   color: $color-text;
   text-decoration: none;
   text-transform: uppercase;
-  margin-bottom: 289px;
-  margin-left: 16px;
 
   &:hover,
   &:focus {
@@ -126,7 +126,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    font-size:  70px;
+    font-size: 70px;
     line-height: 78px;
     margin-bottom: 20px;
   }
@@ -250,9 +250,9 @@
 
   @media (max-width: $mobile-width) {
     margin-left: 0;
+    margin-bottom: 25px;
     padding-left: 16px;
     padding-right: 16px;
-    margin-bottom: 25px;
   }
 }
 
@@ -265,9 +265,9 @@
   }
 
   @media (max-width: $mobile-width) {
+    margin-left: 16px;
+    padding: 22px 47px;
     font-size: 17px;
     line-height: 20px;
-    padding: 22px 47px;
-    margin-left: 16px;
   }
 }

@@ -20,10 +20,10 @@
   }
 
   @media (max-width: $mobile-width) {
+    min-width: 185px;
+    min-height: 47px;
     padding: 15px 32px;
     font-size: 14px;
     line-height: 16px;
-    min-width: 185px;
-    min-height: 47px;
   }
 }

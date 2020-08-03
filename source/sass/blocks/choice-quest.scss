@@ -58,11 +58,11 @@
     &::after {
       content: "";
       position: absolute;
-      width: 13%;
-      height: 100%;
       top: 0;
       right: 0;
-      background-image: linear-gradient(270deg, #1C1B1B 0%, rgba(28, 27, 27, 0) 100%);
+      width: 13%;
+      height: 100%;
+      background-image: linear-gradient(270deg, #1c1b1b 0%, rgba(28, 27, 27, 0) 100%);
     }
   }
 }

@@ -34,7 +34,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 32px;
-  background-color:#1f1d1d;
+  background-color: #1f1d1d;
   border-radius: 3px;
   min-height: 485px;
 
@@ -60,6 +60,7 @@
   background: none;
   opacity: 0.5;
   cursor: pointer;
+  outline: none;
 
   &::after,
   &::before {

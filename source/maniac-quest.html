@@ -15,43 +15,45 @@
 
   <div class="page-container page-container--maniac">
     <header class="page-header page-header--closed page-header--nojs">
-      <div class="page-header__wrapper">
-        <div class="page-header__logo-block">
-          <a href="index.html" class="page-header__logo" aria-label="Ссылка на главную страницу">
-            <svg class="page-header__logo-icon" width="136" height="52">
-              <use xlink:href="#icon-logo"></use>
-            </svg>
-          </a>
-          <button class="page-header__toggle">Меню</button>
-        </div>
-        <nav class="page-header__nav">
-          <ul class="page-header__site-list site-list">
-            <li class="site-list__item">
-              <a href="quests.html" class="site-list__link site-list__link--active" aria-label="Ссылка на страницу с квестами">квесты</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#" class="site-list__link" aria-label="Ссылка на страницу с квестами для новичков">новичкам</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#" class="site-list__link" aria-label="Ссылка на страницу с отзывами">отзывы</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#" class="site-list__link" aria-label="Ссылка на страницу с акциями">акции</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#" class="site-list__link" aria-label="Ссылка на страницу с контактами">контакты</a>
-            </li>
-          </ul>
-          <div class="page-header__contacts">
-            <button type="button" class="page-header__town">
-              <svg class="page-header__town-icon" width="16" height="21">
-                <use xlink:href="#icon-marker">
+      <div class="page-header__container">
+        <div class="page-header__wrapper">
+          <div class="page-header__logo-block">
+            <a href="index.html" class="page-header__logo" aria-label="Ссылка на главную страницу">
+              <svg class="page-header__logo-icon" width="136" height="52">
+                <use xlink:href="#icon-logo"></use>
               </svg>
-              <span class="page-header__town-text">новосибирск</span>
-            </button>
-            <a class="page-header__phone" href="tel:83832840160" aria-label="Позвонить">8 (383) 284 01 60</a>
+            </a>
+            <button class="page-header__toggle">Меню</button>
           </div>
-        </nav>
+          <nav class="page-header__nav">
+            <ul class="page-header__site-list site-list">
+              <li class="site-list__item">
+                <a href="quests.html" class="site-list__link site-list__link--active" aria-label="Ссылка на страницу с квестами">квесты</a>
+              </li>
+              <li class="site-list__item">
+                <a href="#" class="site-list__link" aria-label="Ссылка на страницу с квестами для новичков">новичкам</a>
+              </li>
+              <li class="site-list__item">
+                <a href="#" class="site-list__link" aria-label="Ссылка на страницу с отзывами">отзывы</a>
+              </li>
+              <li class="site-list__item">
+                <a href="#" class="site-list__link" aria-label="Ссылка на страницу с акциями">акции</a>
+              </li>
+              <li class="site-list__item">
+                <a href="#" class="site-list__link" aria-label="Ссылка на страницу с контактами">контакты</a>
+              </li>
+            </ul>
+            <div class="page-header__contacts">
+              <button type="button" class="page-header__town">
+                <svg class="page-header__town-icon" width="16" height="21">
+                  <use xlink:href="#icon-marker">
+                </svg>
+                <span class="page-header__town-text">новосибирск</span>
+              </button>
+              <a class="page-header__phone" href="tel:83832840160" aria-label="Позвонить">8 (383) 284 01 60</a>
+            </div>
+          </nav>
+        </div>
       </div>
     </header>
 
@@ -60,7 +62,7 @@
       <section class="quest quest--maniac">
         <div class="quest__wrapper">
           <div class="quest__container">
-            <a class="quest__link" href="quests.html">
+            <a class="quest__link quest__link--maniac" href="quests.html">
               <svg width="7" height="10">
                 <use xlink:href="#icon-arrow-quest"></use>
               </svg>
@@ -99,12 +101,12 @@
       <div class="page-footer__wrapper">
         <ul class="page-footer__social social">
           <li class="social__item">
-            <a href="#" class="social__link social__link--instagram">
+            <a href="#" class="social__link social__link--instagram" rel="nofollow">
               <span class="visually-hidden">Инстаграм</span>
             </a>
           </li>
           <li class="social__item">
-            <a href="#" class="social__link social__link--vkontakte">
+            <a href="#" class="social__link social__link--vkontakte" rel="nofollow">
               <span class="visually-hidden">Вконтакте</span>
             </a>
           </li>
@@ -117,7 +119,7 @@
       <div class="popup__overlay popup__overlay--town"></div>
       <div class="popup__container">
         <div class="popup__wrapper">
-          <button class="popup__close popup__close--town" aria-label="Закрывает модальное окно"></button>
+          <button type="button" class="popup__close popup__close--town" aria-label="Закрывает модальное окно"></button>
           <h2 class="popup__title">Ваш город:</h2>
           <a class="popup__location">Определить местоположение</a>
           <p class="popup__text">... или выберите вручную</p>
@@ -147,7 +149,7 @@
       <div class="popup__overlay popup__overlay--question"></div>
       <div class="popup__container">
         <div class="popup__wrapper">
-          <button class="popup__close popup__close--question" aria-label="Закрывает модальное окно"></button>
+          <button type="button" class="popup__close popup__close--question" aria-label="Закрывает модальное окно"></button>
           <h2 class="popup__title popup__title--question">Задайте вопрос</h2>
           <form class="popup__form form" action="https://echo.htmlacademy.ru" method="POST">
             <ul class="form__list">

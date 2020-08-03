@@ -34,25 +34,25 @@
 
   @media (max-width: $mobile-width) {
     width: auto;
-    text-align: center;
+    margin-bottom: 33px;
     padding-left: 12px;
     padding-right: 12px;
-    margin-bottom: 33px;
+    text-align: center;
   }
 }
 
 .promo__text {
-  margin: 0;
   width: 470px;
+  margin: 0;
   font-weight: 500;
   font-size: 17px;
   line-height: 25px;
   margin-bottom: 69px;
 
   @media (max-width: $tablet-width) {
+    margin-bottom: 40px;
     font-size: 15px;
     line-height: 22px;
-    margin-bottom: 40px;
   }
 
   @media (max-width: $mobile-width) {

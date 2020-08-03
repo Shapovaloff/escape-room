@@ -32,11 +32,11 @@
     }
 
     &--nojs {
-      flex: 0 0 auto;
-      margin-bottom: 20px;
       position: relative;
       height: auto;
       min-height: auto;
+      flex: 0 0 auto;
+      margin-bottom: 20px;
       background-color: #1f1d1d;
 
       .page-header__nav {
@@ -55,7 +55,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background-image: linear-gradient(163.84deg, #633C0F -68.98%, #24150E 75.12%, #1A140D 132.97%);
+    background-image: linear-gradient(163.84deg, #633c0f -68.98%, #24150e 75.12%, #1a140d 132.97%);
   }
 }
 
@@ -228,7 +228,6 @@
 
 .page-header__phone {
   margin-right: 7px;
-
   font: inherit;
   font-size: 14px;
   line-height: 16px;

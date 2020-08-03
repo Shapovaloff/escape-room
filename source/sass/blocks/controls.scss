@@ -1,6 +1,5 @@
 .controls {
   @include reset-list;
-  margin-bottom: 34px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -18,11 +17,11 @@
 }
 
 .controls__item {
-  width: auto;
   display: flex;
   justify-content: center;
   flex-grow: 1;
   flex-shrink: 0;
+  width: auto;
   border-right: 1px solid rgba(#ffffff, 0.32);
 
   &:last-child {
