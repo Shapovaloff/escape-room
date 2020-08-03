@@ -26,6 +26,10 @@
     background-image: linear-gradient(274.19deg, transparent 35.91%, rgba(#24150e, 0.53) 65.15%, rgba(#1a140d, 0.53) 98.48%), url("../img/bg-index-desktop@1x.jpg");
   }
 
+  &--order::after {
+    background-image: url("../img/bg-order-desktop@1x.jpg");;
+  }
+
   &--maniac::after {
     background-image: radial-gradient(43.88% 64.96% at 22.69% 38.28%, rgba(0, 0, 0, 0.04) 47.51%, rgba(0, 0, 0, 0.56) 91.16%), url("../img/bg-maniac-desktop@1x.jpg");
   }
@@ -43,10 +47,6 @@
   }
 
   @media (max-width: $mobile-width) {
-    &::after {
-
-    }
-
     &--index::after {
       background-image: linear-gradient(159.27deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150E 89.63%, #1A140D 106.79%), radial-gradient(41.41% 41.41% at 66.25% 48.18%, transparent 2.48%, transparent 63.56%, rgba(0, 0, 0, 0.35) 97.05%), url("../img/bg-index-mobile@1x.jpg");
     }
@@ -54,8 +54,9 @@
     &--maniac::after,
     &--secrets::after,
     &--ritual::after,
-    &--experiment::after {
-      background-color: #23150e;
+    &--experiment::after,
+    &--order::after {
+      background-color: #3D3333;
       background-size: 100% auto;
     }
 
@@ -73,6 +74,10 @@
 
     &--experiment::after {
       background-image: linear-gradient(160.2deg, rgba(99, 60, 15, 0) 15.44%, rgba(99, 60, 15, 0.1) 25.42%, #24150E 61.36%, #1A140D 75.24%), url("../img/bg-experiment-mobile@1x.jpg");
+    }
+
+    &--order::after {
+      background-image: linear-gradient(160.2deg, rgba(99, 60, 15, 0) 15.44%, rgba(99, 60, 15, 0.1) 25.42%, #24150E 61.36%, #1A140D 75.24%), url("../img/bg-order-mobile@1x.png");;
     }
   }
 }

@@ -16,6 +16,16 @@
   background-color: rgba(#3d3333, 0.97);
 }
 
+.popup__container {
+  @media (max-width: $mobile-width) {
+    position: fixed;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+}
+
 .popup__wrapper {
   position: fixed;
   width: 480px;
@@ -24,9 +34,20 @@
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 32px;
-  background-image: linear-gradient(0deg, #141414 0%, #1f1d1d 100%);
+  background-color:#1f1d1d;
   border-radius: 3px;
   min-height: 485px;
+
+  @media (max-width: $mobile-width) {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    top: 0;
+    transform: translate(-50%, 0);
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 .popup__close {
@@ -54,6 +75,11 @@
   &::before {
     transform: rotate(-45deg);
   }
+
+  @media (max-width: $mobile-width) {
+    right: 16px;
+    top: 39px;
+  }
 }
 
 .popup__title {
@@ -65,7 +91,7 @@
   margin-bottom: 28px;
 
   &--question {
-    margin-bottom: 39px;
+    margin-bottom: 38px;
   }
 }
 

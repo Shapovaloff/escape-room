@@ -35,14 +35,18 @@
   letter-spacing: 0.03em;
   color: $color-text-white;
 
-  &:hover,
-  &:focus {
+  &[href]:hover,
+  &[href]:focus {
     color: $color-accent;
   }
 
   &--active {
     color: $color-accent;
     cursor: default;
+  }
+
+  &--active[href] {
+    cursor: pointer;
   }
 
   @media (max-width: $mobile-width) {

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,60 +9,68 @@
   <meta name="description" content="Лучшие квесты в Новосибирске">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
   <div style="display: none">
-    <include src="build/img/sprite_auto.svg"><include>
+    <include src="build/img/sprite_auto.svg">
+      <include>
   </div>
 
   <div class="page-container page-container--index">
     <header class="page-header page-header--closed page-header--nojs">
-      <div class="page-header__wrapper">
-        <div class="page-header__logo-block">
-          <a class="page-header__logo" aria-label="Ссылка на главную страницу">
-            <svg class="page-header__logo-icon" width="136" height="52">
-              <use xlink:href="#icon-logo"></use>
-            </svg>
-          </a>
-          <button class="page-header__toggle">Меню</button>
-        </div>
-        <nav class="page-header__nav">
-          <ul class="page-header__site-list site-list">
-            <li class="site-list__item">
-              <a href="quests.html" class="site-list__link" aria-label="Ссылка на страницу с квестами">квесты</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#" class="site-list__link" aria-label="Ссылка на страницу с квестами для новичков">новичкам</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#" class="site-list__link" aria-label="Ссылка на страницу с отзывами">отзывы</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#" class="site-list__link" aria-label="Ссылка на страницу с акциями">акции</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#" class="site-list__link" aria-label="Ссылка на страницу с контактами">контакты</a>
-            </li>
-          </ul>
-          <div class="page-header__contacts">
-            <button type="button" class="page-header__town">
-              <svg class="page-header__town-icon" width="16" height="21">
-                <use xlink:href="#icon-marker">
+      <div class="page-header__container">
+        <div class="page-header__wrapper">
+          <div class="page-header__logo-block">
+            <a class="page-header__logo" aria-label="Ссылка на главную страницу">
+              <svg class="page-header__logo-icon" width="136" height="52">
+                <use xlink:href="#icon-logo"></use>
               </svg>
-              <span class="page-header__town-text">новосибирск</span>
-            </button>
-            <a class="page-header__phone" href="tel:83832840160" aria-label="Позвонить">8 (383) 284 01 60</a>
+            </a>
+            <button class="page-header__toggle">Меню</button>
           </div>
-        </nav>
+          <nav class="page-header__nav">
+            <ul class="page-header__site-list site-list">
+              <li class="site-list__item">
+                <a href="quests.html" class="site-list__link" aria-label="Ссылка на страницу с квестами">квесты</a>
+              </li>
+              <li class="site-list__item">
+                <a href="#" class="site-list__link" aria-label="Ссылка на страницу с квестами для новичков">новичкам</a>
+              </li>
+              <li class="site-list__item">
+                <a href="#" class="site-list__link" aria-label="Ссылка на страницу с отзывами">отзывы</a>
+              </li>
+              <li class="site-list__item">
+                <a href="#" class="site-list__link" aria-label="Ссылка на страницу с акциями">акции</a>
+              </li>
+              <li class="site-list__item">
+                <a href="#" class="site-list__link" aria-label="Ссылка на страницу с контактами">контакты</a>
+              </li>
+            </ul>
+            <div class="page-header__contacts">
+              <button type="button" class="page-header__town">
+                <svg class="page-header__town-icon" width="16" height="21">
+                  <use xlink:href="#icon-marker">
+                </svg>
+                <span class="page-header__town-text">новосибирск</span>
+              </button>
+              <a class="page-header__phone" href="tel:83832840160" aria-label="Позвонить">8 (383) 284 01 60</a>
+            </div>
+          </nav>
+        </div>
       </div>
+
     </header>
 
     <main class="page-main">
       <section class="promo">
-      <div class="promo__wrapper">
-        <h1 class="title promo__title">Лучшие квесты в Новосибирске</h1>
-        <p class="promo__text">Надоело проводить свободное время лёжа на диване? Игровые площадки questroom на целый час погружают вас  в мир незабываемых авантюр. Ищите подсказки, решайте головоломки и находите выход из комнаты!</p>
-        <a href="quests.html" class="button promo__button" aria-label="Ссылка на страницу с квестами">выбрать квест</a>
-      </div>
+        <div class="promo__wrapper">
+          <h1 class="title promo__title">Лучшие квесты в Новосибирске</h1>
+          <p class="promo__text">Надоело проводить свободное время лёжа на диване? Игровые площадки questroom на целый
+            час погружают вас в мир незабываемых авантюр. Ищите подсказки, решайте головоломки и находите выход из
+            комнаты!</p>
+          <a href="quests.html" class="button promo__button" aria-label="Ссылка на страницу с квестами">выбрать
+            квест</a>
+        </div>
       </section>
     </main>
 
@@ -85,60 +94,78 @@
 
     <section class="popup popup--town">
       <div class="popup__overlay popup__overlay--town"></div>
-      <div class="popup__wrapper">
-        <button class="popup__close popup__close--town" aria-label="Закрывает модальное окно"></button>
-        <h2 class="popup__title">Ваш город:</h2>
-        <a class="popup__location">Определить местоположение</a>
-        <p class="popup__text">... или выберите вручную</p>
+      <div class="popup__container">
+        <div class="popup__wrapper">
+          <button class="popup__close popup__close--town" aria-label="Закрывает модальное окно"></button>
+          <h2 class="popup__title">Ваш город:</h2>
+          <a class="popup__location">Определить местоположение</a>
+          <p class="popup__text">... или выберите вручную</p>
 
-        <ul class="popup__list">
-          <li class="popup__item popup__item--active">
-            <a href="#" class="popup__link">Новосибирск</a>
-          </li>
-          <li class="popup__item">
-            <a href="#" class="popup__link">Иркутск</a>
-          </li>
-          <li class="popup__item">
-            <a href="#" class="popup__link">Смоленск</a>
-          </li>
-          <li class="popup__item">
-            <a href="#" class="popup__link">Волгоград</a>
-          </li>
-          <li class="popup__item">
-            <a href="#" class="popup__link">Комсомольск-на-Амуре</a>
-          </li>
-        </ul>
+          <ul class="popup__list">
+            <li class="popup__item popup__item--active">
+              <a href="#" class="popup__link">Новосибирск</a>
+            </li>
+            <li class="popup__item">
+              <a href="#" class="popup__link">Иркутск</a>
+            </li>
+            <li class="popup__item">
+              <a href="#" class="popup__link">Смоленск</a>
+            </li>
+            <li class="popup__item">
+              <a href="#" class="popup__link">Волгоград</a>
+            </li>
+            <li class="popup__item">
+              <a href="#" class="popup__link">Комсомольск-на-Амуре</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <section class="popup popup--question">
       <div class="popup__overlay popup__overlay--question"></div>
-      <div class="popup__wrapper">
-        <button class="popup__close popup__close--question" aria-label="Закрывает модальное окно"></button>
-        <h2 class="popup__title popup__title--question">Задайте вопрос</h2>
-        <form class="popup__form form" action="https://echo.htmlacademy.ru" method="POST">
-          <p class="form__item">
-            <label for="form__name">Чтобы мы смогли обращаться к вам, оставьте ваше имя</label>
-            <input id="form__name" name="name" type="text" placeholder="Имя" required>
-          </p>
-          <p class="form__item">
-            <label for="form__email">Чтобы вы получили ответ, оставьте ваш e-mail</label>
-            <input id="form__email" name="email" type="email" placeholder="E-mail" required>
-          </p>
-          <p class="form__item">
-            <label for="form__question">Ваш вопрос:</label>
-            <textarea name="question" id="form__question" placeholder="Начните вводить ..." required></textarea>
-          </p>
-          <button type="submit" class="button form__btn" disabled>отправить вопрос</button>
-          <p class="form__checkbox">
-            <input type="checkbox" class="visually-hidden" id="form__checkbox" required>
-            <label for="form__checkbox">Я согласен с <a href="#">правилами обработки персональных данных</a> и пользовательским соглашением</label>
-          </p>
-        </form>
-      </div>
+      <div class="popup__container">
+        <div class="popup__wrapper">
+          <button class="popup__close popup__close--question" aria-label="Закрывает модальное окно"></button>
+          <h2 class="popup__title popup__title--question">Задайте вопрос</h2>
+          <form class="popup__form form" action="https://echo.htmlacademy.ru" method="POST">
+            <ul class="form__list">
+              <li class="form__item">
+                <label for="form__name">Чтобы мы смогли обращаться к вам, оставьте ваше имя</label>
+                <p class="form__input-block">
+                  <input class="form__input" id="form__name" name="name" type="text" minlength="2" required>
+                  <span class="form__placeholder">Имя</span>
+                  <span class="form__invalid">Имя должно содержать не менее 2-х символов</span>
+                </p>
+              </li>
+              <li class="form__item">
+                <label for="form__email">Чтобы вы получили ответ, оставьте ваш e-mail</label>
+                <p class="form__input-block">
+                  <input class="form__input" id="form__email" name="email" type="email" required>
+                  <span class="form__placeholder">E-mail</span>
+                  <span class="form__invalid">Введён некорректный e-mail, попробуйте заново</span>
+                </p>
+              </li>
+              <li class="form__item">
+                <label for="form__question">Ваш вопрос:</label>
+                <textarea name="question" id="form__question" minlength="10" placeholder="Начните вводить ..." required></textarea>
+              </li>
+              <li class="form__item form__item--btn">
+                <button type="submit" class="button form__btn" disabled>отправить вопрос</button>
+              </li>
+              <li class="form__checkbox">
+                <input type="checkbox" class="visually-hidden" id="form__checkbox" required>
+                <label for="form__checkbox">Я согласен с <a href="#">правилами обработки персональных данных</a> и
+                  пользовательским соглашением</label>
+              </li>
+            </ul>
+          </form>
+        </div>
     </section>
+
   </div>
 
   <script src="js/main.js"></script>
 </body>
+
 </html>
