@@ -14,7 +14,121 @@
   width: calc(33% - 17px);
   margin-right: 24px;
   margin-bottom: 32px;
-  background-color: #000000;
+  border-radius: 4px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: -2;
+    background-color: #000000;
+    border-radius: 4px;
+  }
+
+  &--crypt::after {
+    background-image: url("../img/quests-img/crypt-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/quests-img/crypt-desktop@2x.jpg");
+    }
+  }
+
+  &--maniac::after {
+    background-image: url("../img/quests-img/maniac-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/quests-img/maniac-desktop@2x.jpg");
+    }
+  }
+
+  &--ritual::after {
+    background-image: url("../img/quests-img/ritual-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/quests-img/ritual-desktop@2x.jpg");
+    }
+  }
+
+  &--history::after {
+    background-image: url("../img/quests-img/history-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/quests-img/history-desktop@2x.jpg");
+    }
+  }
+
+  &--secrets::after {
+    background-image: url("../img/quests-img/secrets-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/quests-img/secrets-desktop@2x.jpg");
+    }
+  }
+
+  &--hut::after {
+    background-image: url("../img/quests-img/hut-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/quests-img/hut-desktop@2x.jpg");
+    }
+  }
+
+  &--experiment::after {
+    background-image: url("../img/quests-img/experiment-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/quests-img/experiment-desktop@2x.jpg");
+    }
+  }
+
+  &--metro::after {
+    background-image: url("../img/quests-img/metro-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/quests-img/metro-desktop@2x.jpg");
+    }
+  }
+
+  &--attic::after {
+    background-image: url("../img/quests-img/attic-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/quests-img/attic-desktop@2x.jpg");
+    }
+  }
+
+  &--frontier::after {
+    background-image: url("../img/quests-img/frontier-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/quests-img/frontier-desktop@2x.jpg");
+    }
+  }
+
+  &--mars::after {
+    background-image: url("../img/quests-img/mars-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/quests-img/mars-desktop@2x.jpg");
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 160px;
+    z-index: -1;
+    background: linear-gradient(0.17deg, rgba(28, 27, 27, 0.9) 5.23%, rgba(46, 46, 46, 0) 98.38%);
+  }
 
   &:nth-child(3n) {
     margin-right: 0;
@@ -34,6 +148,7 @@
 
   @media (max-width: $mobile-width) {
     width: 100%;
+    height: auto;
     min-height: 232px;
     margin-right: 0;
     margin-bottom: 16px;
@@ -45,34 +160,26 @@
 }
 
 .cards__link {
+  padding: 15px 18px 20px 19px;
   text-decoration: none;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
   width: 100%;
   height: 100%;
-  display: block;
   cursor: pointer;
+  min-height: 232px;
+  overflow-wrap: break-word;
 
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 160px;
-    background: linear-gradient(0.17deg, rgba(28, 27, 27, 0.9) 5.23%, rgba(46, 46, 46, 0) 98.38%);
+  @media (max-width: $mobile-width) {
+    padding: 15px 14px 20px 19px;
   }
 }
 
-.cards__img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  border-radius: 4px;
-}
-
 .cards__hit {
-  position: absolute;
-  right: 17px;
-  top: 15px;
+  position: relative;
+  margin-left: auto;
+  margin-bottom: auto;
   padding: 4px 13px 4px 29px;
   font-weight: 500;
   font-size: 12px;
@@ -84,24 +191,17 @@
   &::after {
     content: "";
     position: absolute;
-    left: 13px;
+    left: 14px;
     top: 6px;
     width: 12px;
     height: 12px;
     background-image: url("../img/star-icon.svg");
     background-repeat: no-repeat;
   }
-
-  @media (max-width: $mobile-width) {
-    right: 14px;
-  }
 }
 
 .cards__wrap {
-  position: absolute;
-  bottom: 20px;
-  left: 19px;
-  width: 235px;
+  margin-right: 44px;
 }
 
 .cards__item:hover .cards__title,
@@ -143,7 +243,8 @@
 .cards__address svg,
 .cards__persons svg,
 .cards__complexity svg {
-  margin-right: 9px;
+  margin-right: 8px;
+  margin-left: 1px;
 }
 
 .cards__block {

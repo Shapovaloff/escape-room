@@ -4,6 +4,7 @@
   font-size: 64px;
   line-height: 70px;
   color: #ffffff;
+  overflow-wrap: break-word;
 
   @media (max-width: $tablet-width) {
     font-size: 48px;

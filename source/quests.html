@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <div style="display: none">
+  <div class="visually-hidden">
     <include src="build/img/sprite_auto.svg"><include>
   </div>
 
@@ -120,13 +120,13 @@
           </div>
 
           <ul class="choice-quest__cards cards">
-            <li class="cards__item">
+            <li class="cards__item cards__item--crypt" >
               <a href="#" class="cards__link">
-                <picture>
-                  <source type="image/webp" srcset="img/quests-img/crypt-desktop@1x.webp 1x, img/quests-img/crypt-desktop@2x.webp 2x">
+                <!-- <picture>
+                  <source type="image/webp" srcset="img/quests-img/crypt-desktop@1x.webp 1x, img/quests-img/crypt-desktop@2x.webp 2x"> -->
                   <!-- 1х: 344px; 2x: 688px -->
-                  <img class="cards__img" src="img/quests-img/crypt-desktop@1x.jpg" srcset="img/quests-img/crypt-desktop@2x.jpg 2x" width="344" height="232" alt="Квест Склеп">
-                </picture>
+                  <!-- <img class="cards__img" src="img/quests-img/crypt-desktop@1x.jpg" srcset="img/quests-img/crypt-desktop@2x.jpg 2x" width="344" height="232" alt="Квест Склеп">
+                </picture> -->
                 <span class="cards__hit">Хит</span>
                 <div class="cards__wrap">
                   <h3 class="cards__title">Склеп</h3>
@@ -155,13 +155,13 @@
               </a>
             </li>
 
-            <li class="cards__item">
+            <li class="cards__item cards__item--maniac">
               <a href="maniac-quest.html" class="cards__link">
-                <picture>
-                  <source type="image/webp" srcset="img/quests-img/maniac-desktop@1x.webp 1x, img/quests-img/maniac-desktop@2x.webp 2x">
+                <!-- <picture>
+                  <source type="image/webp" srcset="img/quests-img/maniac-desktop@1x.webp 1x, img/quests-img/maniac-desktop@2x.webp 2x"> -->
                   <!-- 1х: 344px; 2x: 688px -->
-                  <img class="cards__img" src="img/quests-img/maniac-desktop@1x.jpg" srcset="img/quests-img/maniac-desktop@2x.jpg 2x" width="344" height="232" alt="Квест Маньяк">
-                </picture>
+                  <!-- <img class="cards__img" src="img/quests-img/maniac-desktop@1x.jpg" srcset="img/quests-img/maniac-desktop@2x.jpg 2x" width="344" height="232" alt="Квест Маньяк">
+                </picture> -->
                 <span class="cards__hit">Хит</span>
                 <div class="cards__wrap">
                   <h3 class="cards__title">Маньяк</h3>
@@ -190,13 +190,13 @@
               </a>
             </li>
 
-            <li class="cards__item">
+            <li class="cards__item cards__item--ritual">
               <a href="ritual-quest.html" class="cards__link">
-                <picture>
-                  <source type="image/webp" srcset="img/quests-img/ritual-desktop@1x.webp 1x, img/quests-img/ritual-desktop@2x.webp 2x">
+                <!-- <picture>
+                  <source type="image/webp" srcset="img/quests-img/ritual-desktop@1x.webp 1x, img/quests-img/ritual-desktop@2x.webp 2x"> -->
                   <!-- 1х: 344px; 2x: 688px -->
-                  <img class="cards__img" src="img/quests-img/ritual-desktop@1x.jpg" srcset="img/quests-img/ritual-desktop@2x.jpg 2x" width="344" height="232" alt="Квест Ритуал">
-                </picture>
+                  <!-- <img class="cards__img" src="img/quests-img/ritual-desktop@1x.jpg" srcset="img/quests-img/ritual-desktop@2x.jpg 2x" width="344" height="232" alt="Квест Ритуал">
+                </picture> -->
                 <div class="cards__wrap">
                   <h3 class="cards__title">Ритуал</h3>
                   <p class="cards__address">
@@ -207,7 +207,7 @@
                   </p>
                   <div class="cards__block">
                     <p class="cards__persons">
-                       rel="nofollow" width="13" height="16">
+                      <svg width="13" height="16">
                         <use xlink:href="#icon-person">
                       </svg>
                       <span>3–5 чел</span>
@@ -223,13 +223,13 @@
               </a>
             </li>
 
-            <li class="cards__item">
+            <li class="cards__item cards__item--history">
               <a href="#" class="cards__link">
-                <picture>
-                  <source type="image/webp" srcset="img/quests-img/history-desktop@1x.webp 1x, img/quests-img/history-desktop@2x.webp 2x">
+                <!-- <picture>
+                  <source type="image/webp" srcset="img/quests-img/history-desktop@1x.webp 1x, img/quests-img/history-desktop@2x.webp 2x"> -->
                   <!-- 1х: 344px; 2x: 688px -->
-                  <img class="cards__img" src="img/quests-img/history-desktop@1x.jpg" srcset="img/quests-img/history-desktop@2x.jpg 2x" width="344" height="232" alt="Квест История призраков">
-                </picture>
+                  <!-- <img class="cards__img" src="img/quests-img/history-desktop@1x.jpg" srcset="img/quests-img/history-desktop@2x.jpg 2x" width="344" height="232" alt="Квест История призраков">
+                </picture> -->
                 <div class="cards__wrap">
                   <h3 class="cards__title">История призраков</h3>
                   <p class="cards__address">
@@ -256,14 +256,14 @@
               </a>
             </li>
 
-            <li class="cards__item">
+            <li class="cards__item cards__item--secrets">
               <a href="secrets-quest.html" class="cards__link">
-                <picture>
-                  <source type="image/webp"
-                    srcset="img/quests-img/secrets-desktop@1x.webp 1x, img/quests-img/secrets-desktop@2x.webp 2x">
+                <!-- <picture> -->
+                  <!-- <source type="image/webp"
+                    srcset="img/quests-img/secrets-desktop@1x.webp 1x, img/quests-img/secrets-desktop@2x.webp 2x"> -->
                   <!-- 1х: 344px; 2x: 688px -->
-                  <img class="cards__img" src="img/quests-img/secrets-desktop@1x.jpg" srcset="img/quests-img/secrets-desktop@2x.jpg 2x" width="344" height="232" alt="Квест Тайны старого особняка">
-                </picture>
+                  <!-- <img class="cards__img" src="img/quests-img/secrets-desktop@1x.jpg" srcset="img/quests-img/secrets-desktop@2x.jpg 2x" width="344" height="232" alt="Квест Тайны старого особняка">
+                </picture> -->
                 <div class="cards__wrap">
                   <h3 class="cards__title">Тайны старого особняка</h3>
                   <p class="cards__address">
@@ -290,14 +290,14 @@
               </a>
             </li>
 
-            <li class="cards__item">
+            <li class="cards__item cards__item--hut">
               <a href="#" class="cards__link">
-                <picture>
+                <!-- <picture>
                   <source type="image/webp"
-                    srcset="img/quests-img/hut-desktop@1x.webp 1x, img/quests-img/hut-desktop@2x.webp 2x">
+                    srcset="img/quests-img/hut-desktop@1x.webp 1x, img/quests-img/hut-desktop@2x.webp 2x"> -->
                   <!-- 1х: 344px; 2x: 688px -->
-                  <img class="cards__img" src="img/quests-img//hut-desktop@1x.jpg" srcset="img/quests-img/hut-desktop@2x.jpg 2x" width="344" height="232" alt="Квест Хижина в лесу">
-                </picture>
+                  <!-- <img class="cards__img" src="img/quests-img//hut-desktop@1x.jpg" srcset="img/quests-img/hut-desktop@2x.jpg 2x" width="344" height="232" alt="Квест Хижина в лесу">
+                </picture> -->
                 <span class="cards__hit">Хит</span>
                 <div class="cards__wrap">
                   <h3 class="cards__title">Хижина в лесу</h3>
@@ -325,14 +325,14 @@
               </a>
             </li>
 
-            <li class="cards__item">
+            <li class="cards__item cards__item--experiment">
               <a href="experiment-quest.html" class="cards__link">
-                <picture>
-                  <source type="image/webp"
-                    srcset="img/quests-img/experiment-desktop@1x.webp 1x, img/quests-img/experiment-desktop@2x.webp 2x">
+                <!-- <picture> -->
+                  <!-- <source type="image/webp"
+                    srcset="img/quests-img/experiment-desktop@1x.webp 1x, img/quests-img/experiment-desktop@2x.webp 2x"> -->
                   <!-- 1х: 344px; 2x: 688px -->
-                  <img class="cards__img" src="img/quests-img/experiment-desktop@1x.jpg" srcset="img/quests-img/experiment-desktop@2x.jpg 2x" width="344" height="232" alt="Квест Фатальный эксперимент">
-                </picture>
+                  <!-- <img class="cards__img" src="img/quests-img/experiment-desktop@1x.jpg" srcset="img/quests-img/experiment-desktop@2x.jpg 2x" width="344" height="232" alt="Квест Фатальный эксперимент">
+                </picture> -->
                 <span class="cards__hit">Хит</span>
                 <div class="cards__wrap">
                   <h3 class="cards__title">Фатальный эксперимент</h3>
@@ -360,14 +360,14 @@
               </a>
             </li>
 
-            <li class="cards__item">
+            <li class="cards__item cards__item--metro">
               <a href="#" class="cards__link">
-                <picture>
-                  <source type="image/webp"
-                    srcset="img/quests-img/metro-desktop@1x.webp 1x, img/quests-img/metro-desktop@2x.webp 2x">
+                <!-- <picture> -->
+                  <!-- <source type="image/webp"
+                    srcset="img/quests-img/metro-desktop@1x.webp 1x, img/quests-img/metro-desktop@2x.webp 2x"> -->
                   <!-- 1х: 344px; 2x: 688px -->
-                  <img class="cards__img" src="img/quests-img/metro-desktop@1x.jpg" srcset="img/quests-img/metro-desktop@2x.jpg 2x" width="344" height="232" alt="Квест Метро 2033">
-                </picture>
+                  <!-- <img class="cards__img" src="img/quests-img/metro-desktop@1x.jpg" srcset="img/quests-img/metro-desktop@2x.jpg 2x" width="344" height="232" alt="Квест Метро 2033">
+                </picture> -->
 
                 <div class="cards__wrap">
                   <h3 class="cards__title">Метро 2033</h3>
@@ -395,14 +395,14 @@
               </a>
             </li>
 
-            <li class="cards__item">
+            <li class="cards__item cards__item--attic">
               <a href="#" class="cards__link">
-                <picture>
-                  <source type="image/webp"
-                    srcset="img/quests-img/attic-desktop@1x.webp 1x, img/quests-img/attic-desktop@2x.webp 2x">
+                <!-- <picture> -->
+                  <!-- <source type="image/webp"
+                    srcset="img/quests-img/attic-desktop@1x.webp 1x, img/quests-img/attic-desktop@2x.webp 2x"> -->
                   <!-- 1х: 344px; 2x: 688px -->
-                  <img class="cards__img" src="img/quests-img/attic-desktop@1x.jpg" srcset="img/quests-img/attic-desktop@2x.jpg 2x" width="344" height="232" alt="Квест Старый чердак">
-                </picture>
+                  <!-- <img class="cards__img" src="img/quests-img/attic-desktop@1x.jpg" srcset="img/quests-img/attic-desktop@2x.jpg 2x" width="344" height="232" alt="Квест Старый чердак">
+                </picture> -->
                 <div class="cards__wrap">
                   <h3 class="cards__title">Старый чердак</h3>
                   <p class="cards__address">
@@ -429,14 +429,14 @@
               </a>
             </li>
 
-            <li class="cards__item">
+            <li class="cards__item cards__item--frontier">
               <a href="#" class="cards__link">
-                <picture>
+                <!-- <picture>
                   <source type="image/webp"
-                    srcset="img/quests-img/frontier-desktop@1x.webp 1x, img/quests-img/frontier-desktop@2x.webp 2x">
+                    srcset="img/quests-img/frontier-desktop@1x.webp 1x, img/quests-img/frontier-desktop@2x.webp 2x"> -->
                   <!-- 1х: 344px; 2x: 688px -->
-                  <img class="cards__img" src="img/quests-img/frontier-desktop@1x.jpg" srcset="img/quests-img/frontier-desktop@2x.jpg 2x" width="344" height="232" alt="Квест Последний рубеж">
-                </picture>
+                  <!-- <img class="cards__img" src="img/quests-img/frontier-desktop@1x.jpg" srcset="img/quests-img/frontier-desktop@2x.jpg 2x" width="344" height="232" alt="Квест Последний рубеж">
+                </picture> -->
                 <div class="cards__wrap">
                   <h3 class="cards__title">Последний рубеж</h3>
                   <p class="cards__address">
@@ -463,14 +463,14 @@
               </a>
             </li>
 
-            <li class="cards__item">
+            <li class="cards__item cards__item--mars">
               <a href="#" class="cards__link">
-                <picture>
+                <!-- <picture>
                   <source type="image/webp"
-                    srcset="img/quests-img/mars-desktop@1x.webp 1x, img/quests-img/mars-desktop@2x.webp 2x">
+                    srcset="img/quests-img/mars-desktop@1x.webp 1x, img/quests-img/mars-desktop@2x.webp 2x"> -->
                   <!-- 1х: 344px; 2x: 688px -->
-                  <img class="cards__img" src="img/quests-img/mars-desktop@1x.jpg" srcset="img/quests-img/mars-desktop@2x.jpg 2x" width="344" height="232" alt="Квест Ритуал">
-                </picture>
+                  <!-- <img class="cards__img" src="img/quests-img/mars-desktop@1x.jpg" srcset="img/quests-img/mars-desktop@2x.jpg 2x" width="344" height="232" alt="Квест Ритуал">
+                </picture> -->
                 <div class="cards__wrap">
                   <h3 class="cards__title">Марс-2056</h3>
                   <p class="cards__address">

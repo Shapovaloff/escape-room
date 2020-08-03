@@ -1,6 +1,7 @@
 .order {
   max-width: 1152px;
   margin: 0 auto;
+  overflow-wrap: break-word;
 }
 
 .order__wrapper {
@@ -26,6 +27,11 @@
 .order__title-block {
   margin-right: 7.8%;
   margin-bottom: 15px;
+  max-width: 50%;
+
+  @media (max-width: $mobile-width) {
+    max-width: 100%;
+  }
 }
 
 .order__link {
@@ -233,7 +239,7 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 48px;
-  width: 820px;
+  width: 852px;
 
   @media (max-width: $tablet-width) {
     width: 100%;
@@ -244,31 +250,18 @@
   margin-right: 32px;
   margin-bottom: 33px;
 
-  &:nth-child(6n) {
-    margin-right: 0;
-  }
-
-  @media (max-width: $tablet-width) {
-    &:nth-child(6n) {
-      margin-right: 32px;
-    }
-  }
-
   @media (max-width: $mobile-width) {
     margin-right: 25px;
     margin-bottom: 32px;
-
-    &:nth-child(6n) {
-      margin-right: 25px;
-    }
   }
 }
 
 .order__form-item label {
   display: block;
-  padding: 9px 29px 5px 29px;
+  padding: 9px 15px 5px;
   margin-bottom: 4px;
   min-width: 110px;
+  max-width: 110px;
   min-height: 38px;
   text-align: center;
   font-weight: bold;
@@ -278,6 +271,7 @@
   color: #ffffff;
   box-shadow: inset 0 0 0 2px #c4c4c4;
   border-radius: 65px;
+  overflow-wrap: break-word;
   cursor: pointer;
 
   &:hover,

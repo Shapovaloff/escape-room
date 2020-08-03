@@ -102,6 +102,11 @@
   }
 }
 
+.controls__btn-text {
+  overflow-wrap: break-word;
+  max-width: 150px;
+}
+
 .controls__item--active .controls__btn-text {
   padding-top: 4px;
   padding-bottom: 2px;

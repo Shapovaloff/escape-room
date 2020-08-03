@@ -148,7 +148,7 @@
 .page-header__nav {
   display: flex;
   justify-content: space-between;
-  width: calc(47% + 307px);
+  width: calc(35% + 463px);
 
   @media (max-width: $tablet-width) {
     width: 500px;
@@ -166,6 +166,8 @@
 .page-header__contacts {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  min-width: 300px;
   margin-bottom: 8px;
 
   @media (max-width: $tablet-width) {
@@ -208,6 +210,8 @@
   margin-left: 7px;
   padding-top: 7px;
   padding-bottom: 6px;
+  max-width: 130px;
+  overflow-wrap: break-word;
 
   &::after {
     position: absolute;
@@ -217,12 +221,16 @@
     height: 2px;
     background-image: url("../img/line-dashed-orange.svg");
     background-repeat: repeat-x;
-    background-size: cover;
+    background-size: contain;
   }
 
   &:hover::after,
   &:focus::after {
     content: "";
+  }
+
+  @media (max-width: $tablet-width) {
+    max-width: 200px;
   }
 }
 
