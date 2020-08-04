@@ -19,7 +19,7 @@
       <div class="page-header__container">
         <div class="page-header__wrapper">
           <div class="page-header__logo-block">
-            <a href="index.html" class="page-header__logo" aria-label="Ссылка на главную страницу">
+            <a href="main.html" class="page-header__logo" aria-label="Ссылка на главную страницу">
               <svg class="page-header__logo-icon" width="136" height="52">
                 <use xlink:href="#icon-logo"></use>
               </svg>
@@ -174,13 +174,13 @@
                 <label for="form__question">Ваш вопрос:</label>
                 <textarea name="question" id="form__question" minlength="10" placeholder="Начните вводить ..." required=""></textarea>
               </li>
-              <li class="form__item">
-                <button type="submit" class="button form__btn" disabled="">отправить вопрос</button>
-              </li>
               <li class="form__checkbox">
                 <input type="checkbox" class="visually-hidden" id="form__checkbox" required="">
                 <label for="form__checkbox">Я согласен с <a href="#">правилами обработки персональных данных</a> и
                   пользовательским соглашением</label>
+              </li>
+              <li class="form__item form__item--btn">
+                <button type="submit" class="button form__btn">отправить вопрос</button>
               </li>
             </ul>
           </form>

@@ -23,6 +23,14 @@
   }
 
   &--index::after {
+    background-image: linear-gradient(274.19deg, rgba(#24150e, 0.43) 15.91%, rgba(#24150e, 0.73) 35.15%, rgba(#1a140d, 0.83) 98.48%), url("../img/bg-index-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: linear-gradient(274.19deg, transparent 35.91%, rgba(#24150e, 0.53) 65.15%, rgba(#1a140d, 0.93) 98.48%), url("../img/bg-index-desktop@2x.jpg");
+    }
+  }
+
+  &--main::after {
     background-image: linear-gradient(274.19deg, transparent 35.91%, rgba(#24150e, 0.53) 65.15%, rgba(#1a140d, 0.53) 98.48%), url("../img/bg-index-desktop@1x.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -72,6 +80,14 @@
 
   @media (max-width: $mobile-width) {
     &--index::after {
+      background-image: linear-gradient(274.19deg, rgba(#24150e, 0.43) 15.91%, rgba(#24150e, 0.73) 35.15%, rgba(#1a140d, 0.83) 98.48%), url("../img/bg-index-mobile@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: linear-gradient(274.19deg, rgba(#24150e, 0.43) 15.91%, rgba(#24150e, 0.73) 35.15%, rgba(#1a140d, 0.83) 98.48%), url("../img/bg-index-mobile@2x.jpg");
+      }
+    }
+
+    &--main::after {
       background-image: linear-gradient(159.27deg, rgba(99, 60, 15, 0) 23.22%, rgba(99, 60, 15, 0) 37.46%, #24150e 89.63%, #1a140d 106.79%), radial-gradient(41.41% 41.41% at 66.25% 48.18%, transparent 2.48%, transparent 63.56%, rgba(0, 0, 0, 0.35) 97.05%), url("../img/bg-index-mobile@1x.jpg");
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {

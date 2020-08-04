@@ -1,5 +1,7 @@
 .form__list {
   @include reset-list;
+  display: flex;
+  flex-direction: column;
 }
 
 .form__item {
@@ -37,7 +39,6 @@
 .form__input-block {
   margin: 0;
   position: relative;
-  margin-bottom: 28px;
 }
 
 .form__input {
@@ -135,9 +136,7 @@
 
 .form__btn {
   display: block;
-  margin: 0 auto;
-  margin-top: 33px;
-  margin-bottom: 24px;
+  margin: 7px auto 14px;
   padding: 15px 32px;
   font-size: 14px;
   line-height: 16px;
@@ -154,6 +153,7 @@
 
 .form__checkbox {
   display: flex;
+  order: 1;
   margin: 0;
 }
 

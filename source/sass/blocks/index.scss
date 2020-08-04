@@ -1,0 +1,34 @@
+.index__list {
+  @include reset-list;
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $mobile-width) {
+    padding: 8%;
+  }
+}
+
+.index__item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.index__link {
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 24px;
+  line-height: 32px;
+  color: $color-text;
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}

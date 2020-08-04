@@ -245,3 +245,47 @@
     window.closeTownPopup(questionPopup, evt);
   });
 })();
+
+// Переключение городов в попапе
+
+(function () {
+  var popupTown = document.querySelector('.popup--town');
+  var tabItems = popupTown.querySelectorAll('.popup__item');
+
+  var activeElement = function (element) {
+    element.addEventListener('click', function () {
+      for (var i = 0; i < tabItems.length; i++) {
+        tabItems[i].classList.remove('popup__item--active');
+        if (element === tabItems[i]) {
+          tabItems[i].classList.add('popup__item--active');
+        }
+      }
+    });
+  };
+
+  for (var i = 0; i < tabItems.length; i++) {
+    activeElement(tabItems[i]);
+  }
+})();
+
+
+// Переключение табов на странице выбора квеста
+
+(function () {
+  var tabItems = document.querySelectorAll('.controls__item');
+
+  var activeElement = function (element) {
+    element.addEventListener('click', function () {
+      for (var i = 0; i < tabItems.length; i++) {
+        tabItems[i].classList.remove('controls__item--active');
+        if (element === tabItems[i]) {
+          tabItems[i].classList.add('controls__item--active');
+        }
+      }
+    });
+  };
+
+  for (var i = 0; i < tabItems.length; i++) {
+    activeElement(tabItems[i]);
+  }
+})();
